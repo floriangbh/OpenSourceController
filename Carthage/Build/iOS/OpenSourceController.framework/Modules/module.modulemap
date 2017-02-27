@@ -1,0 +1,10 @@
+framework module OpenSourceController {
+  umbrella header "OpenSourceController.h"
+
+  export *
+  module * { export * }
+}
+
+module OpenSourceController.Swift {
+    header "OpenSourceController-Swift.h"
+}
