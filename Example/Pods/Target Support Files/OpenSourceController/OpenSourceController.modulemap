@@ -4,7 +4,3 @@ framework module OpenSourceController {
   export *
   module * { export * }
 }
-
-module OpenSourceController.Swift {
-    header "OpenSourceController-Swift.h"
-}

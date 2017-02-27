@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'OpenSourceController_Example' do
+  pod 'OpenSourceController', :path => '../'
+
+  target 'OpenSourceController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
