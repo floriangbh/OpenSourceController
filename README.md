@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/terflogag/OpenSourceController/blob/master/Ressources/welcome_img.png" alt="FacebookImagePicker" />
+    <img src="https://github.com/terflogag/OpenSourceController/blob/master/Ressources/welcome_img.png" alt="OpenSourceController" />
 </p>
 
 <p align="center">
@@ -15,6 +15,10 @@
 </p>
 
 Display a screen with all licences used in your application can be painful to maintain. OpenSourceController was built to respond to this problem. OpenSourceController is a simple parser to display the licences which are used in your application.
+
+<p align="center">
+    <img src="https://github.com/terflogag/OpenSourceController/blob/master/Ressources/demo.gif" alt="OpenSourceController" />
+</p>
 
 ## Features 
 
