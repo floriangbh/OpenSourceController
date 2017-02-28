@@ -29,7 +29,9 @@ class ViewController: UIViewController {
         openSourceVC.licences = [LicenceFile(title: "FacebookImagePicker",
                                              url: "https://raw.githubusercontent.com/terflogag/FacebookImagePicker/master/LICENSE"),
                                  LicenceFile(title: "JSQMessagesViewController",
-                                             url: "https://raw.githubusercontent.com/jessesquires/JSQMessagesViewController/develop/LICENSE")]
+                                             url: "https://raw.githubusercontent.com/jessesquires/JSQMessagesViewController/develop/LICENSE"),
+                                 LicenceFile(title: "OpenSourceController",
+                                             url: "https://raw.githubusercontent.com/terflogag/OpenSourceController/master/LICENSE")]
 
         // Present controller 
         openSourceVC.presentOpenSourceController(from: self)
