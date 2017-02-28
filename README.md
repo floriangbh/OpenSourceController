@@ -1,4 +1,8 @@
 <p align="center">
+    <img src="https://github.com/terflogag/OpenSourceController/blob/master/Ressources/welcome_img.png" alt="FacebookImagePicker" />
+</p>
+
+<p align="center">
 <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="Prs welcome" />
 </p>
 
