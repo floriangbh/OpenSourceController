@@ -124,14 +124,11 @@ class OpenSourceViewController: UITableViewController {
                                            reuseIdentifier: self.reuseIdentifier)
         }
 
-        let libraryTitleAttribut = [NSFontAttributeName: UIFont.boldSystemFont(ofSize: UIFont.systemFontSize + 2)]
-        let libraryLicenceAttribut = [NSFontAttributeName: UIFont.systemFont(ofSize: UIFont.systemFontSize)]
-        let libraryTitle = NSMutableAttributedString(string: self.downloadedLicence?[indexPath.row].title ?? "",
-                                                     attributes: libraryTitleAttribut)
-        libraryTitle.append(NSAttributedString(string: "\n\n"))
-        libraryTitle.append(NSAttributedString(string: self.downloadedLicence?[indexPath.row].detail ?? "",
-                                               attributes: libraryLicenceAttribut))
-        cell?.textLabel?.attributedText = libraryTitle
+        if let licences = self.downloadedLicence,
+            indexPath.row < licences.count {
+            let licence = licences[indexPath.row]
+            cell?.configure(licence: licence)
+        }
 
         return cell!
     }

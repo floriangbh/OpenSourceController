@@ -10,11 +10,6 @@ import UIKit
 
 class OpenSourceTableViewCell: UITableViewCell {
 
-    // MARK: IBOutlet
-
-    @IBOutlet var licenceTitle: UILabel!
-    @IBOutlet var licenceDesc: UILabel!
-
     // MARK: - Lifecycle
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -54,10 +49,16 @@ class OpenSourceTableViewCell: UITableViewCell {
     /// - Parameter licence: the licence model 
     func configure(licence: LicenceFile) {
 
-        // Library's name
-        self.licenceTitle.text = licence.title
+        // Build attributed text 
+        let libraryTitleAttribut = [NSFontAttributeName: UIFont.boldSystemFont(ofSize: UIFont.systemFontSize + 2)]
+        let libraryLicenceAttribut = [NSFontAttributeName: UIFont.systemFont(ofSize: UIFont.systemFontSize)]
+        let libraryTitle = NSMutableAttributedString(string: licence.title ?? "",
+                                                     attributes: libraryTitleAttribut)
+        libraryTitle.append(NSAttributedString(string: "\n\n"))
+        libraryTitle.append(NSAttributedString(string: licence.detail ?? "",
+                                               attributes: libraryLicenceAttribut))
 
-        // Library licence's detail
-        self.licenceDesc.text = licence.detail
+        // Set text 
+        self.textLabel?.attributedText = libraryTitle
     }
 }
