@@ -10,7 +10,7 @@
 • <a href="#license">License</a>
 </p>
 
-Display a screen with all licence used in your apply can be painful to maintain. OpenSourceController was built to respond to this problem. OpenSourceController is a simple parser to display the licences which are used in your application.
+Display a screen with all licences used in your application can be painful to maintain. OpenSourceController was built to respond to this problem. OpenSourceController is a simple parser to display the licences which are used in your application.
 
 ## Features 
 
