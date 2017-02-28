@@ -1,15 +1,40 @@
-# OpenSourceController
+<p align="center">
+<img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="Prs welcome" />
+</p>
 
-[![CI Status](http://img.shields.io/travis/terflogag/OpenSourceController.svg?style=flat)](https://travis-ci.org/terflogag/OpenSourceController)
-[![Version](https://img.shields.io/cocoapods/v/OpenSourceController.svg?style=flat)](http://cocoapods.org/pods/OpenSourceController)
-[![License](https://img.shields.io/cocoapods/l/OpenSourceController.svg?style=flat)](http://cocoapods.org/pods/OpenSourceController)
-[![Platform](https://img.shields.io/cocoapods/p/OpenSourceController.svg?style=flat)](http://cocoapods.org/pods/OpenSourceController)
+<p align="center">
+<a href="#features">Features</a>
+• <a href="#installation">Installation</a>
+• <a href="#usage">Usage</a>
+• <a href="#translation">Translation</a>
+• <a href="#license">License</a>
+</p>
+
+Display a screen with all licence used in your apply can be painful to maintain. OpenSourceController was built to respond to this problem. OpenSourceController is a simple parser to display the licences which are used in your application.
+
+## Features 
+
+- [x] Display tableView with licences used in your app 
+- [x] AppStore ready
+- [x] Swift 3 
+- [ ] Download licence from Podfile
+- [ ] Download licence from Cartfile 
+- [ ] Carthage support (feel free to make PR)
+- [ ] Unit & UI Test (feel free to make PR)
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+In your terminal :
+
+```ruby
+pod try OpenSourceController
+```
 
 ## Requirements
+
+* Xcode 8 
+* iOS 9.0+ target deployment
+* Swift 3 project 
 
 ## Installation
 
@@ -20,10 +45,50 @@ it, simply add the following line to your Podfile:
 pod "OpenSourceController"
 ```
 
+## Usage
+
+- Import the library : 
+
+```swift
+import OpenSourceController
+```
+
+- Display the controller : 
+
+```swift
+// Create controller 
+let openSourceVC = OpenSourceController()
+
+// Init with LicenceFile object 
+openSourceVC.licences = [LicenceFile(title: "FacebookImagePicker", 
+url: "https://raw.githubusercontent.com/terflogag/FacebookImagePicker/master/LICENSE"),
+LicenceFile(title: "JSQMessagesViewController", 
+url: "https://raw.githubusercontent.com/jessesquires/JSQMessagesViewController/develop/LICENSE")]
+
+// Present controller 
+openSourceVC.presentOpenSourceController(from: self)
+```
+
+## Translation 
+
+OpenSourceController is currently write in english. If you need translation for the permission popup (or whatever thing), just add this line in your localized file  :
+
+```
+"Tiers library" = "<your_translation>";
+```
+
+## Applications
+
+Some applications already use this picker like :
+- [Troll Generator](https://itunes.apple.com/fr/app/troll-generator/id1038097542?mt=8)
+- [Giraf](https://itunes.apple.com/fr/app/giraf/id1136592561?mt=8)
+
+What about yours ? If your application also use this library, feel free to contact me or make pull request on the README 😁
+
 ## Author
 
-terflogag, florian.gabach@gmail.com
+Florian Gabach, contact@floriangabach.fr
 
 ## License
 
-OpenSourceController is available under the MIT license. See the LICENSE file for more info.
+OpenSourceController is available under the [MIT license](LICENSE).

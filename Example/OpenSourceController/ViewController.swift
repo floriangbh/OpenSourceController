@@ -22,11 +22,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showOpenSource(_ sender: Any) {
+        // Create controller 
         let openSourceVC = OpenSourceController()
+        
+        // Init with LicenceFile object 
         openSourceVC.licences = [LicenceFile(title: "FacebookImagePicker", 
                                              url: "https://raw.githubusercontent.com/terflogag/FacebookImagePicker/master/LICENSE"),
                                  LicenceFile(title: "JSQMessagesViewController", 
                                              url: "https://raw.githubusercontent.com/jessesquires/JSQMessagesViewController/develop/LICENSE")]
+        
+        // Present controller 
         openSourceVC.presentOpenSourceController(from: self)
     }
 }
