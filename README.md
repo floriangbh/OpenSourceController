@@ -25,8 +25,11 @@ Display a screen with all licences used in your application can be painful to ma
 - [x] Display tableView with licences used in your app 
 - [x] AppStore ready
 - [x] Swift 3 
-- [ ] Download licence from Podfile
-- [ ] Download licence from Cartfile 
+
+## Todo
+
+- [ ] Download licence from Podfile (https://github.com/terflogag/OpenSourceController/issues/1)
+- [ ] Download licence from Cartfile (https://github.com/terflogag/OpenSourceController/issues/2)
 - [ ] Carthage support (feel free to make PR)
 - [ ] Unit & UI Test (feel free to make PR)
 
