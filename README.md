@@ -30,6 +30,7 @@ Display a screen with all licences used in your application can be painful to ma
 
 - [ ] Download licence from Podfile (https://github.com/terflogag/OpenSourceController/issues/1)
 - [ ] Download licence from Cartfile (https://github.com/terflogag/OpenSourceController/issues/2)
+- [ ] Download licence from local file
 - [ ] Carthage support (feel free to make PR)
 - [ ] Unit & UI Test (feel free to make PR)
 
