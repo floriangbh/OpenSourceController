@@ -33,14 +33,6 @@ Display a screen with all licences used in your application can be painful to ma
 - [ ] Carthage support (feel free to make PR)
 - [ ] Unit & UI Test (feel free to make PR)
 
-## Example
-
-In your terminal :
-
-```ruby
-pod try OpenSourceController
-```
-
 ## Requirements
 
 * Xcode 8 
