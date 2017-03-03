@@ -126,9 +126,7 @@ class OpenSourceViewController: UITableViewController {
                                            reuseIdentifier: self.reuseIdentifier)
         }
 
-        if let licences = self.downloadedLicence,
-            indexPath.row < licences.count {
-            let licence = licences[indexPath.row]
+        if let licence = self.downloadedLicence?.get(at: indexPath.row) {
             cell?.configure(licence: licence)
         }
 
