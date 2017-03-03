@@ -70,11 +70,13 @@ class OpenSourceViewController: UITableViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.separatorStyle = .singleLine
+        self.tableView.backgroundColor = AppearenceManager.whiteCustom
 
         // Close button (on the right corner of navigation bar)
         let closeButton = UIBarButtonItem(barButtonSystemItem: .stop,
                                           target: self,
                                           action: #selector(self.closePicker))
+        closeButton.tintColor = AppearenceManager.black
         self.navigationItem.rightBarButtonItem = closeButton
 
         // Loading indicator
