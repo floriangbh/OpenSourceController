@@ -235,6 +235,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 62PP362QNQ;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -571,6 +572,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B618AB26E5C0028641390646 /* Pods-OpenSourceController_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 62PP362QNQ;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -588,6 +590,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 87501F335829155E114806FA /* Pods-OpenSourceController_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 62PP362QNQ;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

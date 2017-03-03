@@ -86,6 +86,7 @@ OpenSourceController is currently write in english. If you need translation for 
 
 ```
 "Tiers library" = "<your_translation>";
+"Unable to load this licence." = "<your_translation>";
 ```
 
 ## Applications
