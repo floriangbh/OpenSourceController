@@ -14,6 +14,8 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		6B97E461A777A38641DFF2BB /* Pods_OpenSourceController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C1ED0DAD6B8C56070C2725 /* Pods_OpenSourceController_Example.framework */; };
+		767195ED1E697890005424C6 /* CONTRIBUTORS.md in Sources */ = {isa = PBXBuildFile; fileRef = 767195EC1E697890005424C6 /* CONTRIBUTORS.md */; };
+		767195EF1E697896005424C6 /* CONTRIBUTING.md in Sources */ = {isa = PBXBuildFile; fileRef = 767195EE1E697896005424C6 /* CONTRIBUTING.md */; };
 		DE9F38AD98FC5DFBDF7EADF1 /* Pods_OpenSourceController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B544A0C5F114143EEFD0366A /* Pods_OpenSourceController_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +56,8 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		64B1D807A1D310FDA418A3AD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		64E410A815536CB40C9EFD4D /* Pods-OpenSourceController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenSourceController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenSourceController_Example/Pods-OpenSourceController_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		767195EC1E697890005424C6 /* CONTRIBUTORS.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CONTRIBUTORS.md; path = ../CONTRIBUTORS.md; sourceTree = "<group>"; };
+		767195EE1E697896005424C6 /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CONTRIBUTING.md; path = ../CONTRIBUTING.md; sourceTree = "<group>"; };
 		7992D734190D4686F9AF2409 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		87501F335829155E114806FA /* Pods-OpenSourceController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenSourceController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenSourceController_Tests/Pods-OpenSourceController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B544A0C5F114143EEFD0366A /* Pods_OpenSourceController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenSourceController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +151,8 @@
 				C1CC167BCAEA652E1A800918 /* OpenSourceController.podspec */,
 				64B1D807A1D310FDA418A3AD /* README.md */,
 				7992D734190D4686F9AF2409 /* LICENSE */,
+				767195EC1E697890005424C6 /* CONTRIBUTORS.md */,
+				767195EE1E697896005424C6 /* CONTRIBUTING.md */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -406,6 +412,8 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				767195EF1E697896005424C6 /* CONTRIBUTING.md in Sources */,
+				767195ED1E697890005424C6 /* CONTRIBUTORS.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
