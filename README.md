@@ -26,8 +26,7 @@ Display a screen with all licences used in your application can be painful to ma
 ## Features 
 
 - [x] Display tableView with licences used in your app 
-- [x] AppStore ready
-- [x] Swift 3 
+- [x] Download licence from an URL
 
 ## Todo
 
