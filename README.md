@@ -28,13 +28,13 @@ Display a screen with all licences used in your application can be painful to ma
 - [x] Display tableView with licences used in your app 
 - [x] Download licence from an URL
 
-## Todo
+## Todo (feel free to make PR)
 
 - [ ] Download licence from Podfile (https://github.com/terflogag/OpenSourceController/issues/1)
 - [ ] Download licence from Cartfile (https://github.com/terflogag/OpenSourceController/issues/2)
 - [ ] Download licence from local file
-- [ ] Carthage support (feel free to make PR)
-- [ ] Unit & UI Test (feel free to make PR)
+- [ ] Carthage support 
+- [ ] Unit & UI Test 
 
 ## Requirements
 
@@ -86,7 +86,7 @@ OpenSourceController is currently write in english. If you need translation for 
 
 ## Applications
 
-Some applications already use this picker like :
+Some applications already use this controller like :
 - [Troll Generator](https://itunes.apple.com/fr/app/troll-generator/id1038097542?mt=8)
 - [Giraf](https://itunes.apple.com/fr/app/giraf/id1136592561?mt=8)
 
