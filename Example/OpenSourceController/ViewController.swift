@@ -28,10 +28,12 @@ class ViewController: UIViewController {
         // Init with LicenceFile object 
         openSourceVC.licences = [LicenceFile(title: "FacebookImagePicker",
                                              url: "https://raw.githubusercontent.com/terflogag/FacebookImagePicker/master/LICENSE"),
-                                 LicenceFile(title: "JSQMessagesViewController",
-                                             url: "https://raw.githubusercontent.com/jessesquires/JSQMessagesViewController/develop/LICENSE"),
-                                 LicenceFile(title: "OpenSourceController",
-                                             url: "https://raw.githubusercontent.com/terflogag/OpenSourceController/master/LICENSE")]
+//                                 LicenceFile(title: "JSQMessagesViewController",
+//                                             url: "https://raw.githubusercontent.com/jessesquires/JSQMessagesViewController/develop/LICENSE"),
+//                                 LicenceFile(title: "OpenSourceController",
+//                                             url: "https://raw.githubusercontent.com/terflogag/OpenSourceController/master/LICENSE"),
+                                 LicenceFile(title: "Twitter & Fabric", 
+                                             url: " http://get.fabric.io/terms/opensource.txt")]
 
         // Present controller 
         openSourceVC.presentOpenSourceController(from: self)
