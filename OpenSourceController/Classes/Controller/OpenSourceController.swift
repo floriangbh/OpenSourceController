@@ -11,19 +11,24 @@ import UIKit
 public class OpenSourceController: NSObject {
 
     // Contains list of licence object 
-    public var licences: [LicenceFile]?
-    public var title: String?
+    open var licences: [LicenceFile]?
+
+    // Configuration
+    open var config = OpenSourceControllerConfig()
 
     /// Present OpenSourceViewController embbeded in navigation controller
     ///
     /// - Parameter from: the source controller 
-    public final func presentOpenSourceController(from: UIViewController) {
+    open func presentOpenSourceController(from: UIViewController) {
         // Create open source controller
         let licenceController = OpenSourceViewController()
 
         // Init licence 
         licenceController.licences = self.licences
         licenceController.title = title ?? ""
+
+        // Init config
+        licenceController.config = self.config
 
         // Embed in navigation controller
         let navController = UINavigationController(rootViewController: licenceController)

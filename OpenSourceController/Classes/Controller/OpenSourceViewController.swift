@@ -19,7 +19,10 @@ class OpenSourceViewController: UITableViewController {
     private let reuseIdentifier = "openSourceCell"
 
     /// Contains all licence object before downloaded 
-    var licences: [LicenceFile]?
+    internal var licences: [LicenceFile]?
+
+    // Controller configuration for customization
+    internal var config = OpenSourceControllerConfig()
 
     /// Contains all licences object after downloaded
     fileprivate var downloadedLicence: [LicenceFile]? {
@@ -54,7 +57,8 @@ class OpenSourceViewController: UITableViewController {
     fileprivate func prepareLicences() {
         if let licences = self.licences {
             self.startLoading()
-            LicenceDownloader.downloadLicences(licences: licences) { () in
+            LicenceDownloader.downloadLicences(licences: licences,
+                                               config: self.config) { () in
                 // Update licences 
                 self.downloadedLicence = self.licences
             }
@@ -66,16 +70,24 @@ class OpenSourceViewController: UITableViewController {
         // Common init
         self.tableView.tableFooterView = UIView()
         self.tableView.register(OpenSourceTableViewCell.self, forCellReuseIdentifier: self.reuseIdentifier)
+        self.title = self.config.title
+        self.tableView.register(OpenSourceTableViewCell.self,
+                                forCellReuseIdentifier: self.reuseIdentifier)
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.separatorStyle = .singleLine
-        self.tableView.backgroundColor = AppearenceManager.whiteCustom
+        self.tableView.backgroundColor = config.uiConfig.backgroundColor
+
+        // Navigation bar 
+        self.navigationController?.navigationBar.barTintColor = self.config.uiConfig.barTintColor
+        let attribut = [NSForegroundColorAttributeName: self.config.uiConfig.titleColor]
+        self.navigationController?.navigationBar.titleTextAttributes = attribut
 
         // Close button (on the right corner of navigation bar)
         let closeButton = UIBarButtonItem(barButtonSystemItem: .stop,
                                           target: self,
                                           action: #selector(self.closePicker))
-        closeButton.tintColor = AppearenceManager.black
+        closeButton.tintColor = config.uiConfig.closeButtonColor
         self.navigationItem.rightBarButtonItem = closeButton
 
         // Loading indicator
@@ -120,19 +132,22 @@ class OpenSourceViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifier,
                                                  for: indexPath) as? OpenSourceTableViewCell
+        // Init cell
         if cell == nil {
             cell = OpenSourceTableViewCell(style: UITableViewCellStyle.default,
                                            reuseIdentifier: self.reuseIdentifier)
         }
 
+        // Configure the cell with licence 
         if let licence = self.downloadedLicence?.get(at: indexPath.row) {
-            cell?.configure(licence: licence)
+            cell?.configure(licence: licence, config: self.config)
         }
 
         return cell!
     }
 
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        // Automatic dimension 
         return UITableViewAutomaticDimension
     }
 

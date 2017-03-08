@@ -38,7 +38,8 @@ public class LicenceFile: NSObject {
     /// Download licence detail
     ///
     /// - Parameter completion: end of download handler
-    func downloadLicenceDetail(completion: @escaping (Void) -> Void) {
+    func downloadLicenceDetail(config: OpenSourceControllerConfig,
+                               completion: @escaping (Void) -> Void) {
         if let url = URL(string: self.url) {
             let task = URLSession.shared.dataTask(with: url) { (data, _, _) in
                 if let data = data,
@@ -48,7 +49,9 @@ public class LicenceFile: NSObject {
                     self.detail = html
 
                     // Log 
-                    //print("Licence for \(self.title ?? "") downloaded with success.")
+                    if config.verbose {
+                        print("Licence for \(self.title ?? "") downloaded with success.")
+                    }
                 }
                 completion()
             }
