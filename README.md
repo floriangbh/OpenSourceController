@@ -4,7 +4,6 @@
 
 <p align="center">
     <a href="https://cocoapods.org/pods/OpenSourceController" target="_blank"><img src="https://img.shields.io/cocoapods/v/OpenSourceController.svg?style=flat" alt="Cocoapods version" /></a>
-    <a href="http://cocoapods.org/pods/OpenSourceController" target="_blank"><img src="https://img.shields.io/cocoapods/l/OpenSourceController.svg?style=flat" alt="Cocoapods licence" /></a>
     <a href="http://cocoapods.org/pods/OpenSourceController" target="_blank"><img src="https://img.shields.io/cocoapods/p/OpenSourceController.svg?style=flat" alt="Cocoapods plateform" /></a>
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="Prs welcome" />
 </p>
@@ -14,6 +13,7 @@
 • <a href="#installation">Installation</a>
 • <a href="#usage">Usage</a>
 • <a href="#translation">Translation</a>
+• <a href="#customisation">Customisation</a>
 • <a href="#license">License</a>
 </p>
 
@@ -75,7 +75,7 @@ url: "https://raw.githubusercontent.com/jessesquires/JSQMessagesViewController/d
 openSourceVC.presentOpenSourceController(from: self)
 ```
 
-## Customisation / configuration
+## Customisation
 
 You can apply some customisation. To do it you can use the OpenSourceControllerConfig structure like this :
 
