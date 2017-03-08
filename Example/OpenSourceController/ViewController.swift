@@ -65,10 +65,10 @@ class ViewController: UIViewController {
 
         // Navigation bar title color
         openSourceVC.config.uiConfig.titleColor = UIColor.white
-        
+
         // Licence cell background color 
         openSourceVC.config.uiConfig.licenceBackgroundColor = UIColor.red
-        
+
         // Verbose mode 
         openSourceVC.config.verbose = true
     }
