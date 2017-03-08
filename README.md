@@ -80,8 +80,34 @@ openSourceVC.presentOpenSourceController(from: self)
 OpenSourceController is currently write in english. If you need translation for the permission popup (or whatever thing), just add this line in your localized file  :
 
 ```
-"Tiers library" = "<your_translation>";
 "Unable to load this licence." = "<your_translation>";
+```
+
+## Customisation / configuration
+
+You can apply some customisation. To do it you can use the OpenSourceControllerConfig structure like this :
+
+```swift
+// Navigation bar title 
+controller.config.title = "MyCustomTitle"
+
+// Navigation bar tint color
+controller.config.uiConfig.barTintColor = UIColor.red
+
+// Close button color 
+controller.config.uiConfig.closeButtonColor = UIColor.white
+
+// BackgroundColor 
+controller.config.uiConfig.backgroundColor = UIColor.red.withAlphaComponent(0.6)
+
+// Licence text color  
+controller.config.uiConfig.licenceTextColor = UIColor.white
+
+// Navigation bar title color
+controller.config.uiConfig.titleColor = UIColor.white
+
+// Licence cell background color 
+controller.config.uiConfig.licenceBackgroundColor = UIColor.red
 ```
 
 ## Applications

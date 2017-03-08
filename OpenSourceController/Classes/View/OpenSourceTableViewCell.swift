@@ -16,6 +16,7 @@ class OpenSourceTableViewCell: UITableViewCell {
         super.init(style: .default,
                    reuseIdentifier: reuseIdentifier)
 
+        // Prepare cell
         self.prepareCellComponent()
     }
 
@@ -47,7 +48,7 @@ class OpenSourceTableViewCell: UITableViewCell {
     /// Initialize the cell content with Licence model 
     ///
     /// - Parameter licence: the licence model 
-    func configure(licence: LicenceFile) {
+    func configure(licence: LicenceFile, config: OpenSourceControllerConfig) {
 
         // Build attributed text 
         let libraryTitleAttribut = [NSFontAttributeName: UIFont.boldSystemFont(ofSize: UIFont.systemFontSize + 2)]
@@ -60,5 +61,9 @@ class OpenSourceTableViewCell: UITableViewCell {
 
         // Set text 
         self.textLabel?.attributedText = libraryTitle
+        self.textLabel?.textColor = config.uiConfig.licenceTextColor
+
+        // Background 
+        self.backgroundColor = config.uiConfig.licenceBackgroundColor
     }
 }
