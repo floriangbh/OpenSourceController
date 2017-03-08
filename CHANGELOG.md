@@ -1,6 +1,10 @@
 Changelog
 ==========
 
+### 1.0.5
+
+- Fix default customisation
+
 ### 1.0.4
 
 - Add customisation way 
