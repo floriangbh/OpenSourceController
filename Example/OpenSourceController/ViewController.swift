@@ -39,7 +39,15 @@ class ViewController: UIViewController {
                                  LicenceFile(title: "JSQMessagesViewController",
                                              url: "https://raw.githubusercontent.com/jessesquires/JSQMessagesViewController/develop/LICENSE"),
                                  LicenceFile(title: "OpenSourceController",
-                                             url: "https://raw.githubusercontent.com/terflogag/OpenSourceController/master/LICENSE")]
+                                             url: "https://raw.githubusercontent.com/terflogag/OpenSourceController/master/LICENSE"),
+                                 LicenceFile(title: "PermissionScope", 
+                                             url: "https://raw.githubusercontent.com/nickoneill/PermissionScope/master/LICENSE"),
+                                 LicenceFile(title: "EasyTipView", 
+                                             url: "https://raw.githubusercontent.com/teodorpatras/EasyTipView/master/LICENSE"),
+                                 LicenceFile(title: "ReachabilitySwift", 
+                                             url: "https://raw.githubusercontent.com/ashleymills/Reachability.swift/master/LICENSE"),
+                                 LicenceFile(title: "KeychainAccess", 
+                                             url: "https://raw.githubusercontent.com/kishikawakatsumi/KeychainAccess/master/LICENSE")]
 
         // Present controller 
         openSourceVC.presentOpenSourceController(from: self)
