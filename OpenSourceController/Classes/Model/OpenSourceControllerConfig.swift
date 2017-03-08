@@ -12,22 +12,22 @@ public struct OpenSourceControllerConfig {
     /// Sub-stuct holding configuration relevant to UI presentation ! 
     public struct UIConfig {
         /// Will be applied to the navigation bar 
-        public var barTintColor: UIColor = UIColor(red: 246/255.0, green: 246/255.0, blue: 246/255.0, alpha: 1.0)
+        public var barTintColor: UIColor?
 
         /// Will be applied to the navigation bar 
-        public var backgroundColor: UIColor = UIColor(red: 246/255.0, green: 246/255.0, blue: 246/255.0, alpha: 1.0)
+        public var backgroundColor: UIColor? 
 
         /// Will be applied to licence text
-        public var licenceBackgroundColor: UIColor = UIColor.white
+        public var licenceBackgroundColor: UIColor?
 
         /// Will be applied to the navigation bar 
-        public var closeButtonColor: UIColor = UIColor.black
+        public var closeButtonColor: UIColor?
 
         /// Will be applied to licence text
-        public var licenceTextColor: UIColor = UIColor.black
+        public var licenceTextColor: UIColor?
 
         /// Will be applied to licence text
-        public var titleColor: UIColor = UIColor.black
+        public var titleColor: UIColor?
     }
 
     /// Will be applied to the navigation bar title

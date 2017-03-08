@@ -64,6 +64,8 @@ class OpenSourceTableViewCell: UITableViewCell {
         self.textLabel?.textColor = config.uiConfig.licenceTextColor
 
         // Background 
-        self.backgroundColor = config.uiConfig.licenceBackgroundColor
+        if let backgroundColor = config.uiConfig.licenceBackgroundColor {
+            self.backgroundColor = backgroundColor
+        }
     }
 }

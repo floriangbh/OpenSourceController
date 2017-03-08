@@ -76,18 +76,24 @@ class OpenSourceViewController: UITableViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.separatorStyle = .singleLine
-        self.tableView.backgroundColor = config.uiConfig.backgroundColor
+        if let backgroundColor = self.config.uiConfig.backgroundColor {
+            self.tableView.backgroundColor = backgroundColor
+        }
 
         // Navigation bar 
-        self.navigationController?.navigationBar.barTintColor = self.config.uiConfig.barTintColor
-        let attribut = [NSForegroundColorAttributeName: self.config.uiConfig.titleColor]
-        self.navigationController?.navigationBar.titleTextAttributes = attribut
+        if let tintColor = self.config.uiConfig.barTintColor {
+            self.navigationController?.navigationBar.barTintColor = tintColor
+        }
+        if let textColor = self.config.uiConfig.titleColor {
+            let attribut = [NSForegroundColorAttributeName: textColor]
+            self.navigationController?.navigationBar.titleTextAttributes = attribut
+        }
 
         // Close button (on the right corner of navigation bar)
         let closeButton = UIBarButtonItem(barButtonSystemItem: .stop,
                                           target: self,
                                           action: #selector(self.closePicker))
-        closeButton.tintColor = config.uiConfig.closeButtonColor
+        closeButton.tintColor = config.uiConfig.closeButtonColor ?? UIColor.black
         self.navigationItem.rightBarButtonItem = closeButton
 
         // Loading indicator
