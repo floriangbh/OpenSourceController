@@ -48,7 +48,7 @@ public class LicenceFile: NSObject {
                     self.detail = html
 
                     // Log 
-                    print("Licence for \(self.title ?? "") downloaded with success.")
+                    //print("Licence for \(self.title ?? "") downloaded with success.")
                 }
                 completion()
             }
