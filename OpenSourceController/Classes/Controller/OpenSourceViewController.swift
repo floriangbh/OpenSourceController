@@ -57,7 +57,8 @@ class OpenSourceViewController: UITableViewController {
     fileprivate func prepareLicences() {
         if let licences = self.licences {
             self.startLoading()
-            LicenceDownloader.downloadLicences(licences: licences) { () in
+            LicenceDownloader.downloadLicences(licences: licences,
+                                               config: self.config) { () in
                 // Update licences 
                 self.downloadedLicence = self.licences
             }

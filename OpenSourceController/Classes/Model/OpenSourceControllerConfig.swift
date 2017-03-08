@@ -33,6 +33,9 @@ public struct OpenSourceControllerConfig {
     /// Will be applied to the navigation bar title
     public var title: String = "Tiers library"
 
+    // Verbose mode for print log when licence are downloaded
+    public var verbose: Bool = false
+
     /// UI-specific configuration.
     public var uiConfig = UIConfig()
 }

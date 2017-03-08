@@ -81,25 +81,28 @@ You can apply some customisation. To do it you can use the OpenSourceControllerC
 
 ```swift
 // Navigation bar title 
-controller.config.title = "MyCustomTitle"
+openSourceVC.config.title = "MyCustomTitle"
 
 // Navigation bar tint color
-controller.config.uiConfig.barTintColor = UIColor.red
+openSourceVC.config.uiConfig.barTintColor = UIColor.red
 
 // Close button color 
-controller.config.uiConfig.closeButtonColor = UIColor.white
+openSourceVC.config.uiConfig.closeButtonColor = UIColor.white
 
 // BackgroundColor 
-controller.config.uiConfig.backgroundColor = UIColor.red.withAlphaComponent(0.6)
+openSourceVC.config.uiConfig.backgroundColor = UIColor.red.withAlphaComponent(0.6)
 
 // Licence text color  
-controller.config.uiConfig.licenceTextColor = UIColor.white
+openSourceVC.config.uiConfig.licenceTextColor = UIColor.white
 
 // Navigation bar title color
-controller.config.uiConfig.titleColor = UIColor.white
+openSourceVC.config.uiConfig.titleColor = UIColor.white
 
 // Licence cell background color 
-controller.config.uiConfig.licenceBackgroundColor = UIColor.red
+openSourceVC.config.uiConfig.licenceBackgroundColor = UIColor.red
+
+// Verbose mode 
+openSourceVC.config.verbose = true
 ```
 
 ## Translation 

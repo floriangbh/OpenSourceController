@@ -16,6 +16,7 @@ class LicenceDownloader: NSObject {
     ///   - licences: array which contains licence model model 
     ///   - completion: end downloading completion
     class func downloadLicences(licences: [LicenceFile],
+                                config: OpenSourceControllerConfig,
                                 completion: @escaping () -> Void) {
         // Number of licences 
         let licenceCount = licences.count
@@ -25,7 +26,7 @@ class LicenceDownloader: NSObject {
 
         // Download licence's detail for every lience 
         for licence in licences {
-            licence.downloadLicenceDetail(completion: { () in
+            licence.downloadLicenceDetail(config: config, completion: { () in
                 alreadyDownloaded += 1
 
                 // If this is the last licence, perfom completion
