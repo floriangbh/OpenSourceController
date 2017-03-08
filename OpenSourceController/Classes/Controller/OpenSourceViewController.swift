@@ -65,7 +65,6 @@ class OpenSourceViewController: UITableViewController {
     fileprivate func prepareTableView() {
         // Common init
         self.tableView.tableFooterView = UIView()
-        self.title = NSLocalizedString("Tiers library", comment: "")
         self.tableView.register(OpenSourceTableViewCell.self, forCellReuseIdentifier: self.reuseIdentifier)
         self.tableView.dataSource = self
         self.tableView.delegate = self
