@@ -13,7 +13,7 @@ public class OpenSourceController: NSObject {
     // Contains list of licence object 
     open var licences: [LicenceFile]?
 
-    // Client-side authorization options.
+    // Configuration
     open var config = OpenSourceControllerConfig()
 
     /// Present OpenSourceViewController embbeded in navigation controller
@@ -25,6 +25,7 @@ public class OpenSourceController: NSObject {
 
         // Init licence 
         licenceController.licences = self.licences
+        licenceController.title = title ?? ""
 
         // Init config
         licenceController.config = self.config

@@ -69,6 +69,7 @@ class OpenSourceViewController: UITableViewController {
     fileprivate func prepareTableView() {
         // Common init
         self.tableView.tableFooterView = UIView()
+        self.tableView.register(OpenSourceTableViewCell.self, forCellReuseIdentifier: self.reuseIdentifier)
         self.title = self.config.title
         self.tableView.register(OpenSourceTableViewCell.self,
                                 forCellReuseIdentifier: self.reuseIdentifier)
