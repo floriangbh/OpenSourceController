@@ -12,6 +12,7 @@ public class OpenSourceController: NSObject {
 
     // Contains list of licence object 
     public var licences: [LicenceFile]?
+    public var title: String?
 
     /// Present OpenSourceViewController embbeded in navigation controller
     ///
@@ -22,6 +23,7 @@ public class OpenSourceController: NSObject {
 
         // Init licence 
         licenceController.licences = self.licences
+        licenceController.title = title ?? ""
 
         // Embed in navigation controller
         let navController = UINavigationController(rootViewController: licenceController)
