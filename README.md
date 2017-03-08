@@ -75,14 +75,6 @@ url: "https://raw.githubusercontent.com/jessesquires/JSQMessagesViewController/d
 openSourceVC.presentOpenSourceController(from: self)
 ```
 
-## Translation 
-
-OpenSourceController is currently write in english. If you need translation for the permission popup (or whatever thing), just add this line in your localized file  :
-
-```
-"Unable to load this licence." = "<your_translation>";
-```
-
 ## Customisation / configuration
 
 You can apply some customisation. To do it you can use the OpenSourceControllerConfig structure like this :
@@ -108,6 +100,14 @@ controller.config.uiConfig.titleColor = UIColor.white
 
 // Licence cell background color 
 controller.config.uiConfig.licenceBackgroundColor = UIColor.red
+```
+
+## Translation 
+
+OpenSourceController is currently write in english. If you need translation for the permission popup (or whatever thing), just add this line in your localized file  :
+
+```
+"Unable to load this licence." = "<your_translation>";
 ```
 
 ## Applications
