@@ -3,8 +3,6 @@
 //  Pods
 //
 //  Created by Florian Gabach on 03/03/2017.
-//
-//
 
 import Foundation
 

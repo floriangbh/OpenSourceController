@@ -3,8 +3,6 @@
 //  Pods
 //
 //  Created by Florian Gabach on 21/02/2017.
-//
-//
 
 import UIKit
 
