@@ -12,6 +12,13 @@
 		76EAA86A1E93F2CC009A41DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EAA8681E93F2CC009A41DA /* Main.storyboard */; };
 		76EAA86C1E93F2CC009A41DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76EAA86B1E93F2CC009A41DA /* Assets.xcassets */; };
 		76EAA86F1E93F2CC009A41DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EAA86D1E93F2CC009A41DA /* LaunchScreen.storyboard */; };
+		76EAA8881E93F666009A41DA /* OpenSourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA8871E93F666009A41DA /* OpenSourceTableViewCell.swift */; };
+		76EAA88D1E93F675009A41DA /* LicenceDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA88A1E93F675009A41DA /* LicenceDownloader.swift */; };
+		76EAA88E1E93F675009A41DA /* LicenceFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA88B1E93F675009A41DA /* LicenceFile.swift */; };
+		76EAA88F1E93F675009A41DA /* OpenSourceControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA88C1E93F675009A41DA /* OpenSourceControllerConfig.swift */; };
+		76EAA8911E93F67B009A41DA /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA8901E93F67B009A41DA /* Array+Extensions.swift */; };
+		76EAA8941E93F681009A41DA /* OpenSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA8921E93F681009A41DA /* OpenSourceController.swift */; };
+		76EAA8951E93F681009A41DA /* OpenSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA8931E93F681009A41DA /* OpenSourceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		76EAA86B1E93F2CC009A41DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76EAA86E1E93F2CC009A41DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76EAA8701E93F2CC009A41DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76EAA8871E93F666009A41DA /* OpenSourceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenSourceTableViewCell.swift; path = ../../Sources/View/OpenSourceTableViewCell.swift; sourceTree = "<group>"; };
+		76EAA88A1E93F675009A41DA /* LicenceDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicenceDownloader.swift; path = ../../Sources/Model/LicenceDownloader.swift; sourceTree = "<group>"; };
+		76EAA88B1E93F675009A41DA /* LicenceFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicenceFile.swift; path = ../../Sources/Model/LicenceFile.swift; sourceTree = "<group>"; };
+		76EAA88C1E93F675009A41DA /* OpenSourceControllerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenSourceControllerConfig.swift; path = ../../Sources/Model/OpenSourceControllerConfig.swift; sourceTree = "<group>"; };
+		76EAA8901E93F67B009A41DA /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Extensions.swift"; path = "../../Sources/Extensions/Array+Extensions.swift"; sourceTree = "<group>"; };
+		76EAA8921E93F681009A41DA /* OpenSourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenSourceController.swift; path = ../../Sources/Controller/OpenSourceController.swift; sourceTree = "<group>"; };
+		76EAA8931E93F681009A41DA /* OpenSourceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenSourceViewController.swift; path = ../../Sources/Controller/OpenSourceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +70,27 @@
 			children = (
 				76EAA8641E93F2CC009A41DA /* AppDelegate.swift */,
 				76EAA8661E93F2CC009A41DA /* ViewController.swift */,
+				76EAA8891E93F66A009A41DA /* Sources */,
 				76EAA8681E93F2CC009A41DA /* Main.storyboard */,
 				76EAA86B1E93F2CC009A41DA /* Assets.xcassets */,
 				76EAA86D1E93F2CC009A41DA /* LaunchScreen.storyboard */,
 				76EAA8701E93F2CC009A41DA /* Info.plist */,
 			);
 			path = OpenSourceControllerDemo;
+			sourceTree = "<group>";
+		};
+		76EAA8891E93F66A009A41DA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				76EAA8921E93F681009A41DA /* OpenSourceController.swift */,
+				76EAA8931E93F681009A41DA /* OpenSourceViewController.swift */,
+				76EAA8901E93F67B009A41DA /* Array+Extensions.swift */,
+				76EAA88A1E93F675009A41DA /* LicenceDownloader.swift */,
+				76EAA88B1E93F675009A41DA /* LicenceFile.swift */,
+				76EAA88C1E93F675009A41DA /* OpenSourceControllerConfig.swift */,
+				76EAA8871E93F666009A41DA /* OpenSourceTableViewCell.swift */,
+			);
+			name = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +125,7 @@
 				TargetAttributes = {
 					76EAA8601E93F2CC009A41DA = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 62PP362QNQ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,7 +166,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76EAA88D1E93F675009A41DA /* LicenceDownloader.swift in Sources */,
+				76EAA88E1E93F675009A41DA /* LicenceFile.swift in Sources */,
+				76EAA8951E93F681009A41DA /* OpenSourceViewController.swift in Sources */,
+				76EAA8881E93F666009A41DA /* OpenSourceTableViewCell.swift in Sources */,
+				76EAA8911E93F67B009A41DA /* Array+Extensions.swift in Sources */,
+				76EAA8941E93F681009A41DA /* OpenSourceController.swift in Sources */,
 				76EAA8671E93F2CC009A41DA /* ViewController.swift in Sources */,
+				76EAA88F1E93F675009A41DA /* OpenSourceControllerConfig.swift in Sources */,
 				76EAA8651E93F2CC009A41DA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 62PP362QNQ;
 				INFOPLIST_FILE = OpenSourceControllerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fg.OpenSourceControllerDemo;
@@ -274,6 +312,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 62PP362QNQ;
 				INFOPLIST_FILE = OpenSourceControllerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fg.OpenSourceControllerDemo;

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import OpenSourceController
 
 class ViewController: UIViewController {
     
