@@ -1,6 +1,11 @@
 Changelog
 ==========
 
+### 1.0.7
+
+- Fix architecture
+- Add Carthage support 
+
 ### 1.0.5
 
 - Fix default customisation
