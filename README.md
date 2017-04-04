@@ -33,7 +33,6 @@ Display a screen with all licences used in your application can be painful to ma
 - [ ] Download licence from Podfile (https://github.com/terflogag/OpenSourceController/issues/1)
 - [ ] Download licence from Cartfile (https://github.com/terflogag/OpenSourceController/issues/2)
 - [ ] Download licence from local file
-- [ ] Carthage support 
 - [ ] Unit & UI Test 
 
 ## Requirements
@@ -44,11 +43,16 @@ Display a screen with all licences used in your application can be painful to ma
 
 ## Installation
 
-OpenSourceController is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+- To integrate OpenSourceController into your Xcode project using [CocoaPods](http://cocoapods.org), specify it in your Podfile :
 
 ```ruby
 pod "OpenSourceController"
+```
+
+- To integrate OpenSourceController into your Xcode project using [Carthage](https://github.com/Carthage/Carthage), specify it in your Cartfile :
+
+```ruby
+github "terflogag/OpenSourceController" 
 ```
 
 ## Usage
