@@ -1,9 +1,0 @@
-included: 
-  # View
-  - ../OpenSourceController/Classes/View 
-
-  # Controller 
-  - ../OpenSourceController/Classes/Controller
-
-  # Model 
-  - ../OpenSourceController/Classes/Model

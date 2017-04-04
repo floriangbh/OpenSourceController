@@ -1,6 +1,0 @@
-framework module OpenSourceController {
-  umbrella header "OpenSourceController-umbrella.h"
-
-  export *
-  module * { export * }
-}
