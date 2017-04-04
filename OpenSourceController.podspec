@@ -8,5 +8,5 @@ s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'Florian Gabach' => 'contact@floriangabach.fr' }
 s.source           = { :git => 'https://github.com/terflogag/OpenSourceController.git', :tag => s.version.to_s }
 s.ios.deployment_target = '9.0'
-s.source_files = 'OpenSourceController/Classes/**/*'
+s.source_files = 'OpenSourceController/Sources/**/*'
 end
