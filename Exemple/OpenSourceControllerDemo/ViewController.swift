@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         // Create controller 
         let openSourceVC = OpenSourceController()
         
-        // Apply somre customisation if you want !
+        // Apply some customisation if you want 
         //self.controllerCustomUI(openSourceVC: openSourceVC)
         
         // Init with LicenceFile object 

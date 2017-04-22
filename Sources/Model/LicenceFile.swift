@@ -29,7 +29,7 @@ public class LicenceFile: NSObject {
     public init(title: String, url: String) {
         self.title = title
         self.url = url
-        self.detail = NSLocalizedString("Unable to load this licence.",
+        self.detail = NSLocalizedString("Unable to load this licence file.",
                                         comment: "")
     }
 

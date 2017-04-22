@@ -72,8 +72,8 @@
 				76EAA8661E93F2CC009A41DA /* ViewController.swift */,
 				76EAA8891E93F66A009A41DA /* Sources */,
 				76EAA8681E93F2CC009A41DA /* Main.storyboard */,
-				76EAA86B1E93F2CC009A41DA /* Assets.xcassets */,
 				76EAA86D1E93F2CC009A41DA /* LaunchScreen.storyboard */,
+				76EAA86B1E93F2CC009A41DA /* Assets.xcassets */,
 				76EAA8701E93F2CC009A41DA /* Info.plist */,
 			);
 			path = OpenSourceControllerDemo;
