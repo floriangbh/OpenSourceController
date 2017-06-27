@@ -37,7 +37,7 @@ public class LicenceFile: NSObject {
     ///
     /// - Parameter completion: end of download handler
     func downloadLicenceDetail(config: OpenSourceControllerConfig,
-                               completion: @escaping (Void) -> Void) {
+                               completion: @escaping () -> Void) {
         if let url = URL(string: self.url) {
             let task = URLSession.shared.dataTask(with: url) { (data, _, _) in
                 if let data = data,

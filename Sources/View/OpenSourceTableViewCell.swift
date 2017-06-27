@@ -49,8 +49,8 @@ class OpenSourceTableViewCell: UITableViewCell {
     func configure(licence: LicenceFile, config: OpenSourceControllerConfig) {
 
         // Build attributed text 
-        let libraryTitleAttribut = [NSFontAttributeName: UIFont.boldSystemFont(ofSize: UIFont.systemFontSize + 2)]
-        let libraryLicenceAttribut = [NSFontAttributeName: UIFont.systemFont(ofSize: UIFont.systemFontSize)]
+        let libraryTitleAttribut = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: UIFont.systemFontSize + 2)]
+        let libraryLicenceAttribut = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: UIFont.systemFontSize)]
         let libraryTitle = NSMutableAttributedString(string: licence.title ?? "",
                                                      attributes: libraryTitleAttribut)
         libraryTitle.append(NSAttributedString(string: "\n\n"))

@@ -83,7 +83,7 @@ class OpenSourceViewController: UITableViewController {
             self.navigationController?.navigationBar.barTintColor = tintColor
         }
         if let textColor = self.config.uiConfig.titleColor {
-            let attribut = [NSForegroundColorAttributeName: textColor]
+            let attribut = [NSAttributedStringKey.foregroundColor.rawValue: textColor]  
             self.navigationController?.navigationBar.titleTextAttributes = attribut
         }
 
