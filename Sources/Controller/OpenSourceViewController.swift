@@ -26,9 +26,9 @@ class OpenSourceViewController: UITableViewController {
     fileprivate var downloadedLicence: [LicenceFile]? {
         didSet {
             // Update UI 
-            DispatchQueue.main.async {
-                self.stopLoading()
-                self.tableView.reloadData()
+            DispatchQueue.main.async { [weak self] in 
+                self?.stopLoading()
+                self?.tableView.reloadData()
             }
         }
     }
@@ -166,8 +166,8 @@ class OpenSourceViewController: UITableViewController {
 
     /// Dismiss the OpenSourceController
     func dismissController() {
-        DispatchQueue.main.async {
-            self.dismiss(animated: true, completion: nil)
+        DispatchQueue.main.async { [weak self] in 
+            self?.dismiss(animated: true, completion: nil)
         }
     }
 }
