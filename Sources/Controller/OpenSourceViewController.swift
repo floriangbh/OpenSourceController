@@ -102,25 +102,34 @@ class OpenSourceViewController: UITableViewController {
 
     /// Prepare UIActivityIndicatorView and display it at the center of the view
     fileprivate func prepareActivityIndicator() {
-        self.indicator = UIActivityIndicatorView(frame:CGRect(x: 0, y: 0, width: 40, height: 40) )
+        self.indicator = UIActivityIndicatorView(frame:CGRect(x: 0, 
+                                                              y: 0, 
+                                                              width: 40, 
+                                                              height: 40) )
         self.indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         self.indicator.center = self.view.center
+        self.indicator.hidesWhenStopped = true
+        self.indicator.backgroundColor = UIColor.clear
+        self.indicator.color = UIColor.black
         self.view.addSubview(indicator)
     }
 
     /// Start loading : start the loader animation 
     fileprivate func startLoading() {
         self.indicator.startAnimating()
-        self.indicator.backgroundColor = UIColor.clear
-        self.indicator.color = UIColor.black
         self.indicator.isHidden = false
+        
+        // Disable scroll 
+        self.tableView.isScrollEnabled = false
     }
 
     /// Stop loading : stop and hide the loader
     fileprivate func stopLoading() {
-        self.indicator.hidesWhenStopped = true
         self.indicator.stopAnimating()
         self.indicator.isHidden = true
+        
+        // Enable scroll 
+        self.tableView.isScrollEnabled = true
     }
 
     // MARK: - Table View Data Source
