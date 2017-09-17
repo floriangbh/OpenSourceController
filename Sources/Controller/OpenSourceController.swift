@@ -6,7 +6,7 @@
 
 import UIKit
 
-public class OpenSourceController: NSObject {
+public class OpenSourceController: NSObject { 
 
     // Contains list of licence object 
     open var licences: [LicenceFile]?

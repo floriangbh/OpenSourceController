@@ -1,6 +1,10 @@
 Changelog
 ==========
 
+### 2.0
+
+- Swift 4 version 
+
 ### 1.0.8
 
 - Fix architecture

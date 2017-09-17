@@ -37,22 +37,26 @@ Display a screen with all licences used in your application can be painful to ma
 
 ## Requirements
 
-* Xcode 8 
+* Xcode 9
 * iOS 9.0+ target deployment
-* Swift 3 project 
+* Swift 3 or Swift 4 project
 
 ## Installation
 
 - To integrate OpenSourceController into your Xcode project using [CocoaPods](http://cocoapods.org), specify it in your Podfile :
 
 ```ruby
-pod "OpenSourceController"
+pod "OpenSourceController", '~> 2.0' 
+
+pod "OpenSourceController", '~> 1.0.8' # Swift 3.1 version
 ```
 
 - To integrate OpenSourceController into your Xcode project using [Carthage](https://github.com/Carthage/Carthage), specify it in your Cartfile :
 
 ```ruby
-github "terflogag/OpenSourceController" 
+github "terflogag/OpenSourceController" ~> 2.0
+
+github "terflogag/OpenSourceController" ~> 1.0.8 # Swift 3.1 version
 ```
 
 ## Usage
