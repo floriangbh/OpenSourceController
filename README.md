@@ -54,9 +54,9 @@ pod "OpenSourceController", '~> 1.0.8' # Swift 3.1 version
 - To integrate OpenSourceController into your Xcode project using [Carthage](https://github.com/Carthage/Carthage), specify it in your Cartfile :
 
 ```ruby
-github "terflogag/OpenSourceController" ~> 2.0
+github "floriangbh/OpenSourceController" ~> 2.0
 
-github "terflogag/OpenSourceController" ~> 1.0.8 # Swift 3.1 version
+github "floriangbh/OpenSourceController" ~> 1.0.8 # Swift 3.1 version
 ```
 
 ## Usage
