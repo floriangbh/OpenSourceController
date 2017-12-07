@@ -131,7 +131,7 @@ What about yours ? If your application also use this library, feel free to cont
 
 ## Author
 
-Florian Gabach, contact@floriangabach.fr
+Florian Gabach, florian.gabach@gmail.com
 
 ## License
 
