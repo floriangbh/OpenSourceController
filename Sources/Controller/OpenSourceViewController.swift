@@ -45,10 +45,6 @@ class OpenSourceViewController: UITableViewController {
         self.prepareLicences()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
     // MARK: - Prepare
 
     /// Download licences 
