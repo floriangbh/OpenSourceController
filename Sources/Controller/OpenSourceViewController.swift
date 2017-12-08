@@ -7,21 +7,31 @@
 import UIKit
 
 class OpenSourceViewController: UITableViewController {
-
+    
     // MARK: - Var
-
+    
     /// Loading indicator 
-    fileprivate var indicator = UIActivityIndicatorView()
-
+    fileprivate lazy var indicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(frame:CGRect(x: 0,
+                                                             y: 0,
+                                                             width: 40,
+                                                             height: 40) )
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        indicator.hidesWhenStopped = true
+        indicator.backgroundColor = UIColor.clear
+        indicator.color = UIColor.black
+        return indicator
+    }()
+    
     /// TableViewCell identifier
     private let reuseIdentifier = "openSourceCell"
-
+    
     /// Contains all licence object before downloaded 
     internal var licences: [LicenceFile]?
-
+    
     // Controller configuration for customization
     internal var config = OpenSourceControllerConfig()
-
+    
     /// Contains all licences object after downloaded
     fileprivate var downloadedLicence: [LicenceFile]? {
         didSet {
@@ -32,33 +42,45 @@ class OpenSourceViewController: UITableViewController {
             }
         }
     }
-
+    
     // MARK: - Lifecyle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Prepare tableview
+        
+        // Prepare controller
+        self.prepare()
+    }
+    
+    // MARK: - Prepare
+    
+    /// Prepare controller
+    fileprivate func prepare() {
         self.prepareTableView()
-
-        // Download licences
+        self.prepareActivityIndicator()
+        self.prepareCloseButton()
+        self.prepareStyle()
         self.prepareLicences()
     }
-
-    // MARK: - Prepare
-
+    
     /// Download licences 
     fileprivate func prepareLicences() {
-        if let licences = self.licences {
-            self.startLoading()
-            LicenceDownloader.downloadLicences(licences: licences,
-                                               config: self.config) { () in
-                // Update licences 
-                self.downloadedLicence = self.licences
-            }
+        self.startLoading()
+        
+        // Retrieve licence
+        guard let licences = self.licences else {
+            print("No licences found.")
+            return
+        }
+        
+        // Download licence
+        LicenceDownloader.downloadLicences(licences: licences,
+                                           config: self.config) { () in
+                                            // Update licences
+                                            self.downloadedLicence = self.licences
         }
     }
-
+    
     /// Init tableView dataSource, delegate, bar button & title
     fileprivate func prepareTableView() {
         // Common init
@@ -70,46 +92,51 @@ class OpenSourceViewController: UITableViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.separatorStyle = .singleLine
+        
+        // Apply background color from configuration if needed
         if let backgroundColor = self.config.uiConfig.backgroundColor {
             self.tableView.backgroundColor = backgroundColor
         }
-
-        // Navigation bar 
+    }
+    
+    /// Prepare controller style
+    fileprivate func prepareStyle() {
+        // Apply navigation bar tint color if needed
         if let tintColor = self.config.uiConfig.barTintColor {
             self.navigationController?.navigationBar.barTintColor = tintColor
         }
+        
+        // Applu navigation bar text color if needed
         if let textColor = self.config.uiConfig.titleColor {
-            let attribut = [NSAttributedStringKey.foregroundColor: textColor]  
+            let attribut = [NSAttributedStringKey.foregroundColor: textColor]
             self.navigationController?.navigationBar.titleTextAttributes = attribut
         }
-
+    }
+    
+    /// Prepare close button on navigation bar 
+    fileprivate func prepareCloseButton() {
         // Close button (on the right corner of navigation bar)
         let closeButton = UIBarButtonItem(barButtonSystemItem: .stop,
                                           target: self,
                                           action: #selector(self.closePicker))
         closeButton.tintColor = config.uiConfig.closeButtonColor ?? UIColor.black
         self.navigationItem.rightBarButtonItem = closeButton
-
-        // Loading indicator
-        self.prepareActivityIndicator()
     }
-
+    
     // MARK: - Loading indicator
-
+    
     /// Prepare UIActivityIndicatorView and display it at the center of the view
     fileprivate func prepareActivityIndicator() {
-        self.indicator = UIActivityIndicatorView(frame:CGRect(x: 0, 
-                                                              y: 0, 
-                                                              width: 40, 
-                                                              height: 40) )
-        self.indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        self.indicator.center = self.view.center
-        self.indicator.hidesWhenStopped = true
-        self.indicator.backgroundColor = UIColor.clear
-        self.indicator.color = UIColor.black
+        // Add to view
         self.view.addSubview(indicator)
+        
+        // Apply constraint
+        self.indicator.translatesAutoresizingMaskIntoConstraints = false
+        self.indicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        let topConstraint = self.navigationController?.navigationBar.frame.size.height ?? 0.0
+        self.indicator.bottomAnchor.constraint(equalTo: view.topAnchor, constant: topConstraint).isActive=true
     }
-
+    
     /// Start loading : start the loader animation 
     fileprivate func startLoading() {
         self.indicator.startAnimating()
@@ -118,7 +145,7 @@ class OpenSourceViewController: UITableViewController {
         // Disable scroll 
         self.tableView.isScrollEnabled = false
     }
-
+    
     /// Stop loading : stop and hide the loader
     fileprivate func stopLoading() {
         self.indicator.stopAnimating()
@@ -127,17 +154,17 @@ class OpenSourceViewController: UITableViewController {
         // Enable scroll 
         self.tableView.isScrollEnabled = true
     }
-
+    
     // MARK: - Table View Data Source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.downloadedLicence?.count ?? 0
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifier,
                                                  for: indexPath) as? OpenSourceTableViewCell
@@ -146,29 +173,29 @@ class OpenSourceViewController: UITableViewController {
             cell = OpenSourceTableViewCell(style: UITableViewCellStyle.default,
                                            reuseIdentifier: self.reuseIdentifier)
         }
-
+        
         // Configure the cell with licence 
         if let licence = self.downloadedLicence?.get(at: indexPath.row) {
             cell?.configure(licence: licence, config: self.config)
         }
-
+        
         return cell!
     }
-
+    
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         // Automatic dimension 
         return UITableViewAutomaticDimension
     }
-
+    
     // MARK: - Action
-
+    
     /// Handler for click on close button
     @objc fileprivate func closePicker() {
         self.dismissController()
     }
-
+    
     // MARK: - Navigation
-
+    
     /// Dismiss the OpenSourceController
     func dismissController() {
         DispatchQueue.main.async { [weak self] in 

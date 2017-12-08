@@ -1,6 +1,10 @@
 Changelog
 ==========
 
+### 2.0.1
+
+- Clean code and move loader position 
+
 ### 2.0
 
 - Swift 4 version 
