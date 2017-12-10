@@ -33,4 +33,25 @@ public class OpenSourceController: NSObject {
         // Present controller 
         from.present(navController, animated: true)
     }
+    
+    /// Push OpenSourceViewController from navigation controller 
+    ///
+    /// - Parameter from: the source controller
+    open func pushOpenSourceController(from: UIViewController) {
+        // Create open source controller
+        let licenceController = OpenSourceViewController()
+        
+        // Init licence
+        licenceController.licences = self.licences
+        
+        // Init config
+        licenceController.config = self.config
+        
+        // Push controller
+        guard let navigationController = from.navigationController else {
+            print("Source controller isn't embeded in navigation controller. Can't push.")
+            return
+        }
+        navigationController.pushViewController(licenceController, animated: true)
+    }
 }

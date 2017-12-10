@@ -81,6 +81,9 @@ url: "https://raw.githubusercontent.com/jessesquires/JSQMessagesViewController/d
 
 // Present controller 
 openSourceVC.presentOpenSourceController(from: self)
+
+// OR push the controller if the source controller is embeded in navigation controller
+openSourceVC.pushOpenSourceController(from: self)
 ```
 
 ## Customisation
