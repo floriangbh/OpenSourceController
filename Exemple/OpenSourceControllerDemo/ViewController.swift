@@ -49,7 +49,7 @@ class ViewController: UIViewController {
                                              url: "https://raw.githubusercontent.com/kishikawakatsumi/KeychainAccess/master/LICENSE")]
         
         // Present controller 
-        openSourceVC.pushOpenSourceController(from: self)
+        openSourceVC.presentOpenSourceController(from: self)
     }
     
     // Customization 

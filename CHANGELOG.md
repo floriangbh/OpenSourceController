@@ -1,5 +1,9 @@
 Changelog
 ==========
+### 2.1.1
+
+- Hide close button when push the controller
+
 ### 2.1.0
 
 - Add push transition with `pushOpenSourceController(from: self)`

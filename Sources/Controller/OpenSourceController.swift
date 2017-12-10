@@ -40,6 +40,7 @@ public class OpenSourceController: NSObject {
     open func pushOpenSourceController(from: UIViewController) {
         // Create open source controller
         let licenceController = OpenSourceViewController()
+        licenceController.showCloseButton = false // Don't show close button
         
         // Init licence
         licenceController.licences = self.licences

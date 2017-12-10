@@ -29,8 +29,11 @@ class OpenSourceViewController: UITableViewController {
     /// Contains all licence object before downloaded 
     internal var licences: [LicenceFile]?
     
-    // Controller configuration for customization
+    /// Controller configuration for customization
     internal var config = OpenSourceControllerConfig()
+    
+    /// Do we need to show the close button ? (disable if push the controller)
+    internal var showCloseButton: Bool = true
     
     /// Contains all licences object after downloaded
     fileprivate var downloadedLicence: [LicenceFile]? {
@@ -58,7 +61,11 @@ class OpenSourceViewController: UITableViewController {
     fileprivate func prepare() {
         self.prepareTableView()
         self.prepareActivityIndicator()
-        self.prepareCloseButton()
+        
+        if showCloseButton {
+            self.prepareCloseButton()
+        }
+        
         self.prepareStyle()
         self.prepareLicences()
     }
