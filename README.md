@@ -124,14 +124,6 @@ OpenSourceController is currently write in english. If you need translation for 
 "Unable to load this licence." = "<your_translation>";
 ```
 
-## Applications
-
-Some applications already use this controller like :
-- [Troll Generator](https://itunes.apple.com/fr/app/troll-generator/id1038097542?mt=8)
-- [Giraf](https://itunes.apple.com/fr/app/giraf/id1136592561?mt=8)
-
-What about yours ? If your application also use this library, feel free to contact me or make pull request on the README 😁
-
 ## Author
 
 Florian Gabach, florian.gabach@gmail.com
