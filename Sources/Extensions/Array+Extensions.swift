@@ -7,7 +7,6 @@
 import Foundation
 
 extension Array {
-
     /// Get an index safely 
     func get(at index: Int) -> Element? {
         guard index >= 0

@@ -22,14 +22,6 @@ class OpenSourceTableViewCell: UITableViewCell {
         super.init(coder: aDecoder)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
-
     // MARK: - Prepare
 
     func prepareCellComponent() {
