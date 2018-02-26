@@ -1,5 +1,10 @@
 Changelog
 ==========
+
+### 2.1.2
+
+- Use DispatchGroup for download
+
 ### 2.1.1
 
 - Hide close button when push the controller

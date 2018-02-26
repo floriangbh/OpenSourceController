@@ -19,6 +19,7 @@
 		76EAA8911E93F67B009A41DA /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA8901E93F67B009A41DA /* Array+Extensions.swift */; };
 		76EAA8941E93F681009A41DA /* OpenSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA8921E93F681009A41DA /* OpenSourceController.swift */; };
 		76EAA8951E93F681009A41DA /* OpenSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA8931E93F681009A41DA /* OpenSourceViewController.swift */; };
+		C33E4D96204442AC00142EE6 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = C33E4D95204442AC00142EE6 /* CHANGELOG.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		76EAA8901E93F67B009A41DA /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Extensions.swift"; path = "../../Sources/Extensions/Array+Extensions.swift"; sourceTree = "<group>"; };
 		76EAA8921E93F681009A41DA /* OpenSourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenSourceController.swift; path = ../../Sources/Controller/OpenSourceController.swift; sourceTree = "<group>"; };
 		76EAA8931E93F681009A41DA /* OpenSourceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenSourceViewController.swift; path = ../../Sources/Controller/OpenSourceViewController.swift; sourceTree = "<group>"; };
+		C33E4D95204442AC00142EE6 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		76EAA8581E93F2CC009A41DA = {
 			isa = PBXGroup;
 			children = (
+				C33E4D95204442AC00142EE6 /* CHANGELOG.md */,
 				76EAA8631E93F2CC009A41DA /* OpenSourceControllerDemo */,
 				76EAA8621E93F2CC009A41DA /* Products */,
 			);
@@ -157,6 +160,7 @@
 				76EAA86F1E93F2CC009A41DA /* LaunchScreen.storyboard in Resources */,
 				76EAA86C1E93F2CC009A41DA /* Assets.xcassets in Resources */,
 				76EAA86A1E93F2CC009A41DA /* Main.storyboard in Resources */,
+				C33E4D96204442AC00142EE6 /* CHANGELOG.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
