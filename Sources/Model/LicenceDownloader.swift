@@ -16,22 +16,20 @@ class LicenceDownloader: NSObject {
     class func downloadLicences(licences: [LicenceFile],
                                 config: OpenSourceControllerConfig,
                                 completion: @escaping () -> Void) {
-        // Number of licences 
-        let licenceCount = licences.count
-
-        // Already licence downloaded 
-        var alreadyDownloaded = 0
+        let licenceGroupe = DispatchGroup()
 
         // Download licence's detail for every lience 
         for licence in licences {
+            licenceGroupe.enter()
+            
             licence.downloadLicenceDetail(config: config, completion: { () in
-                alreadyDownloaded += 1
-
-                // If this is the last licence, perfom completion
-                if licenceCount == alreadyDownloaded {
-                    completion()
-                }
+                licenceGroupe.leave()
             })
+        }
+        
+        // When everything is downloaded
+        licenceGroupe.notify(queue: .main) {
+            completion()
         }
     }
 }
