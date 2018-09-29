@@ -16,7 +16,7 @@ class OpenSourceViewController: UITableViewController {
                                                              y: 0,
                                                              width: 40,
                                                              height: 40) )
-        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        indicator.style = UIActivityIndicatorView.Style.gray
         indicator.hidesWhenStopped = true
         indicator.backgroundColor = UIColor.clear
         indicator.color = UIColor.black
@@ -115,7 +115,7 @@ class OpenSourceViewController: UITableViewController {
         
         // Applu navigation bar text color if needed
         if let textColor = self.config.uiConfig.titleColor {
-            let attribut = [NSAttributedStringKey.foregroundColor: textColor]
+            let attribut = [NSAttributedString.Key.foregroundColor: textColor]
             self.navigationController?.navigationBar.titleTextAttributes = attribut
         }
     }
@@ -177,7 +177,7 @@ class OpenSourceViewController: UITableViewController {
                                                  for: indexPath) as? OpenSourceTableViewCell
         // Init cell
         if cell == nil {
-            cell = OpenSourceTableViewCell(style: UITableViewCellStyle.default,
+            cell = OpenSourceTableViewCell(style: UITableViewCell.CellStyle.default,
                                            reuseIdentifier: self.reuseIdentifier)
         }
         
@@ -191,7 +191,7 @@ class OpenSourceViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         // Automatic dimension 
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
     
     // MARK: - Action

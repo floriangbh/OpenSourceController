@@ -10,7 +10,7 @@ class OpenSourceTableViewCell: UITableViewCell {
 
     // MARK: - Lifecycle
 
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default,
                    reuseIdentifier: reuseIdentifier)
 
@@ -41,8 +41,8 @@ class OpenSourceTableViewCell: UITableViewCell {
     func configure(licence: LicenceFile, config: OpenSourceControllerConfig) {
 
         // Build attributed text 
-        let libraryTitleAttribut = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: UIFont.systemFontSize + 2)]
-        let libraryLicenceAttribut = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: UIFont.systemFontSize)]
+        let libraryTitleAttribut = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: UIFont.systemFontSize + 2)]
+        let libraryLicenceAttribut = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: UIFont.systemFontSize)]
         let libraryTitle = NSMutableAttributedString(string: licence.title ?? "",
                                                      attributes: libraryTitleAttribut)
         libraryTitle.append(NSAttributedString(string: "\n\n"))
