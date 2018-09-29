@@ -1,6 +1,10 @@
 Changelog
 ==========
 
+### 3.0.0
+
+- Swift 4.2
+
 ### 2.1.2
 
 - Use DispatchGroup for download
