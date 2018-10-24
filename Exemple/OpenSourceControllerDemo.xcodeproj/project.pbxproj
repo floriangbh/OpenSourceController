@@ -7,22 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76229B602180AB5000A61697 /* OpenSourceControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76229B5E2180AB5000A61697 /* OpenSourceControllerConfig.swift */; };
+		76229B612180AB5000A61697 /* OpenSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76229B5F2180AB5000A61697 /* OpenSourceController.swift */; };
+		76229B662180AB5D00A61697 /* OpenSourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76229B622180AB5C00A61697 /* OpenSourceTableViewCell.swift */; };
+		76229B672180AB5D00A61697 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76229B632180AB5D00A61697 /* LoadingViewController.swift */; };
+		76229B682180AB5D00A61697 /* OpenSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76229B642180AB5D00A61697 /* OpenSourceViewController.swift */; };
+		76229B692180AB5D00A61697 /* LicenceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76229B652180AB5D00A61697 /* LicenceListViewController.swift */; };
+		76229B832180AFAD00A61697 /* HTTPDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76229B822180AFAD00A61697 /* HTTPDataLoader.swift */; };
+		7627B06221807C4B0057FFBB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7627B06121807C4B0057FFBB /* README.md */; };
 		76EAA8651E93F2CC009A41DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA8641E93F2CC009A41DA /* AppDelegate.swift */; };
 		76EAA8671E93F2CC009A41DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA8661E93F2CC009A41DA /* ViewController.swift */; };
 		76EAA86A1E93F2CC009A41DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EAA8681E93F2CC009A41DA /* Main.storyboard */; };
 		76EAA86C1E93F2CC009A41DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76EAA86B1E93F2CC009A41DA /* Assets.xcassets */; };
 		76EAA86F1E93F2CC009A41DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EAA86D1E93F2CC009A41DA /* LaunchScreen.storyboard */; };
-		76EAA8881E93F666009A41DA /* OpenSourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA8871E93F666009A41DA /* OpenSourceTableViewCell.swift */; };
-		76EAA88D1E93F675009A41DA /* LicenceDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA88A1E93F675009A41DA /* LicenceDownloader.swift */; };
+		76EAA88D1E93F675009A41DA /* LicenceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA88A1E93F675009A41DA /* LicenceLoader.swift */; };
 		76EAA88E1E93F675009A41DA /* LicenceFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA88B1E93F675009A41DA /* LicenceFile.swift */; };
-		76EAA88F1E93F675009A41DA /* OpenSourceControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA88C1E93F675009A41DA /* OpenSourceControllerConfig.swift */; };
 		76EAA8911E93F67B009A41DA /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA8901E93F67B009A41DA /* Array+Extensions.swift */; };
-		76EAA8941E93F681009A41DA /* OpenSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA8921E93F681009A41DA /* OpenSourceController.swift */; };
-		76EAA8951E93F681009A41DA /* OpenSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA8931E93F681009A41DA /* OpenSourceViewController.swift */; };
+		76FED173217F6CEF0037BD09 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FED172217F6CEF0037BD09 /* UIViewController+Extensions.swift */; };
+		76FED175217F6D400037BD09 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FED174217F6D400037BD09 /* UIView+Extensions.swift */; };
 		C33E4D96204442AC00142EE6 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = C33E4D95204442AC00142EE6 /* CHANGELOG.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		76229B5E2180AB5000A61697 /* OpenSourceControllerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenSourceControllerConfig.swift; path = ../../Sources/OpenSourceControllerConfig.swift; sourceTree = "<group>"; };
+		76229B5F2180AB5000A61697 /* OpenSourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenSourceController.swift; path = ../../Sources/OpenSourceController.swift; sourceTree = "<group>"; };
+		76229B622180AB5C00A61697 /* OpenSourceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenSourceTableViewCell.swift; path = ../../Sources/OpenSourceViewController/OpenSourceTableViewCell.swift; sourceTree = "<group>"; };
+		76229B632180AB5D00A61697 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingViewController.swift; path = ../../Sources/OpenSourceViewController/LoadingViewController.swift; sourceTree = "<group>"; };
+		76229B642180AB5D00A61697 /* OpenSourceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenSourceViewController.swift; path = ../../Sources/OpenSourceViewController/OpenSourceViewController.swift; sourceTree = "<group>"; };
+		76229B652180AB5D00A61697 /* LicenceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicenceListViewController.swift; path = ../../Sources/OpenSourceViewController/LicenceListViewController.swift; sourceTree = "<group>"; };
+		76229B822180AFAD00A61697 /* HTTPDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPDataLoader.swift; path = ../../Sources/Loader/HTTPDataLoader.swift; sourceTree = "<group>"; };
+		7627B06121807C4B0057FFBB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		76EAA8611E93F2CC009A41DA /* OpenSourceControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenSourceControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76EAA8641E93F2CC009A41DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76EAA8661E93F2CC009A41DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,13 +44,11 @@
 		76EAA86B1E93F2CC009A41DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76EAA86E1E93F2CC009A41DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76EAA8701E93F2CC009A41DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76EAA8871E93F666009A41DA /* OpenSourceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenSourceTableViewCell.swift; path = ../../Sources/View/OpenSourceTableViewCell.swift; sourceTree = "<group>"; };
-		76EAA88A1E93F675009A41DA /* LicenceDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicenceDownloader.swift; path = ../../Sources/Model/LicenceDownloader.swift; sourceTree = "<group>"; };
+		76EAA88A1E93F675009A41DA /* LicenceLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicenceLoader.swift; path = ../../Sources/Model/LicenceLoader.swift; sourceTree = "<group>"; };
 		76EAA88B1E93F675009A41DA /* LicenceFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicenceFile.swift; path = ../../Sources/Model/LicenceFile.swift; sourceTree = "<group>"; };
-		76EAA88C1E93F675009A41DA /* OpenSourceControllerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenSourceControllerConfig.swift; path = ../../Sources/Model/OpenSourceControllerConfig.swift; sourceTree = "<group>"; };
 		76EAA8901E93F67B009A41DA /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Extensions.swift"; path = "../../Sources/Extensions/Array+Extensions.swift"; sourceTree = "<group>"; };
-		76EAA8921E93F681009A41DA /* OpenSourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenSourceController.swift; path = ../../Sources/Controller/OpenSourceController.swift; sourceTree = "<group>"; };
-		76EAA8931E93F681009A41DA /* OpenSourceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenSourceViewController.swift; path = ../../Sources/Controller/OpenSourceViewController.swift; sourceTree = "<group>"; };
+		76FED172217F6CEF0037BD09 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "../../Sources/Extensions/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		76FED174217F6D400037BD09 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Extensions.swift"; path = "../../Sources/Extensions/UIView+Extensions.swift"; sourceTree = "<group>"; };
 		C33E4D95204442AC00142EE6 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,10 +63,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76229B5D2180AA8E00A61697 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				76229B822180AFAD00A61697 /* HTTPDataLoader.swift */,
+			);
+			name = Loader;
+			sourceTree = "<group>";
+		};
 		76EAA8581E93F2CC009A41DA = {
 			isa = PBXGroup;
 			children = (
 				C33E4D95204442AC00142EE6 /* CHANGELOG.md */,
+				7627B06121807C4B0057FFBB /* README.md */,
 				76EAA8631E93F2CC009A41DA /* OpenSourceControllerDemo */,
 				76EAA8621E93F2CC009A41DA /* Products */,
 			);
@@ -73,11 +94,11 @@
 			children = (
 				76EAA8641E93F2CC009A41DA /* AppDelegate.swift */,
 				76EAA8661E93F2CC009A41DA /* ViewController.swift */,
-				76EAA8891E93F66A009A41DA /* Sources */,
 				76EAA8681E93F2CC009A41DA /* Main.storyboard */,
 				76EAA86D1E93F2CC009A41DA /* LaunchScreen.storyboard */,
 				76EAA86B1E93F2CC009A41DA /* Assets.xcassets */,
 				76EAA8701E93F2CC009A41DA /* Info.plist */,
+				76EAA8891E93F66A009A41DA /* Sources */,
 			);
 			path = OpenSourceControllerDemo;
 			sourceTree = "<group>";
@@ -85,15 +106,44 @@
 		76EAA8891E93F66A009A41DA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				76EAA8921E93F681009A41DA /* OpenSourceController.swift */,
-				76EAA8931E93F681009A41DA /* OpenSourceViewController.swift */,
-				76EAA8901E93F67B009A41DA /* Array+Extensions.swift */,
-				76EAA88A1E93F675009A41DA /* LicenceDownloader.swift */,
-				76EAA88B1E93F675009A41DA /* LicenceFile.swift */,
-				76EAA88C1E93F675009A41DA /* OpenSourceControllerConfig.swift */,
-				76EAA8871E93F666009A41DA /* OpenSourceTableViewCell.swift */,
+				76229B5F2180AB5000A61697 /* OpenSourceController.swift */,
+				76229B5E2180AB5000A61697 /* OpenSourceControllerConfig.swift */,
+				76FED17B217F6E2E0037BD09 /* OpenSourceViewController */,
+				76FED17A217F6E0F0037BD09 /* Extensions */,
+				76229B5D2180AA8E00A61697 /* Loader */,
+				76FED17C217F6E4A0037BD09 /* Model */,
 			);
 			name = Sources;
+			sourceTree = "<group>";
+		};
+		76FED17A217F6E0F0037BD09 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				76FED172217F6CEF0037BD09 /* UIViewController+Extensions.swift */,
+				76EAA8901E93F67B009A41DA /* Array+Extensions.swift */,
+				76FED174217F6D400037BD09 /* UIView+Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		76FED17B217F6E2E0037BD09 /* OpenSourceViewController */ = {
+			isa = PBXGroup;
+			children = (
+				76229B652180AB5D00A61697 /* LicenceListViewController.swift */,
+				76229B632180AB5D00A61697 /* LoadingViewController.swift */,
+				76229B622180AB5C00A61697 /* OpenSourceTableViewCell.swift */,
+				76229B642180AB5D00A61697 /* OpenSourceViewController.swift */,
+			);
+			name = OpenSourceViewController;
+			sourceTree = "<group>";
+		};
+		76FED17C217F6E4A0037BD09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				76EAA88A1E93F675009A41DA /* LicenceLoader.swift */,
+				76EAA88B1E93F675009A41DA /* LicenceFile.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +209,7 @@
 			files = (
 				76EAA86F1E93F2CC009A41DA /* LaunchScreen.storyboard in Resources */,
 				76EAA86C1E93F2CC009A41DA /* Assets.xcassets in Resources */,
+				7627B06221807C4B0057FFBB /* README.md in Resources */,
 				76EAA86A1E93F2CC009A41DA /* Main.storyboard in Resources */,
 				C33E4D96204442AC00142EE6 /* CHANGELOG.md in Resources */,
 			);
@@ -171,15 +222,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76EAA88D1E93F675009A41DA /* LicenceDownloader.swift in Sources */,
+				76229B692180AB5D00A61697 /* LicenceListViewController.swift in Sources */,
+				76229B612180AB5000A61697 /* OpenSourceController.swift in Sources */,
+				76EAA88D1E93F675009A41DA /* LicenceLoader.swift in Sources */,
+				76229B682180AB5D00A61697 /* OpenSourceViewController.swift in Sources */,
 				76EAA88E1E93F675009A41DA /* LicenceFile.swift in Sources */,
-				76EAA8951E93F681009A41DA /* OpenSourceViewController.swift in Sources */,
-				76EAA8881E93F666009A41DA /* OpenSourceTableViewCell.swift in Sources */,
+				76229B662180AB5D00A61697 /* OpenSourceTableViewCell.swift in Sources */,
+				76229B832180AFAD00A61697 /* HTTPDataLoader.swift in Sources */,
+				76FED173217F6CEF0037BD09 /* UIViewController+Extensions.swift in Sources */,
 				76EAA8911E93F67B009A41DA /* Array+Extensions.swift in Sources */,
-				76EAA8941E93F681009A41DA /* OpenSourceController.swift in Sources */,
 				76EAA8671E93F2CC009A41DA /* ViewController.swift in Sources */,
-				76EAA88F1E93F675009A41DA /* OpenSourceControllerConfig.swift in Sources */,
+				76FED175217F6D400037BD09 /* UIView+Extensions.swift in Sources */,
 				76EAA8651E93F2CC009A41DA /* AppDelegate.swift in Sources */,
+				76229B602180AB5000A61697 /* OpenSourceControllerConfig.swift in Sources */,
+				76229B672180AB5D00A61697 /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

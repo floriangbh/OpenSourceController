@@ -1,6 +1,10 @@
 Changelog
 ==========
 
+### 3.1.0
+
+- Code cleanup 
+
 ### 3.0.0
 
 - Swift 4.2

@@ -6,7 +6,7 @@
 
 import UIKit
 
-class LicenceDownloader: NSObject {
+final class LicenceLoader {
 
     /// Download every licence 
     ///

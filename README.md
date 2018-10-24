@@ -33,20 +33,21 @@ Display a screen with all licences used in your application can be painful to ma
 - [ ] Download licence from Podfile (https://github.com/terflogag/OpenSourceController/issues/1)
 - [ ] Download licence from Cartfile (https://github.com/terflogag/OpenSourceController/issues/2)
 - [ ] Download licence from local file
-- [ ] Unit & UI Test 
 
 ## Requirements
 
 * Xcode 9
 * iOS 9.0+ target deployment
-* Swift 3 or Swift 4 project
+* Swift 3, Swift 4 or Swift 4.2 project
 
 ## Installation
 
 - To integrate OpenSourceController into your Xcode project using [CocoaPods](http://cocoapods.org), specify it in your Podfile :
 
 ```ruby
-pod "OpenSourceController", '~> 2.0' 
+pod "OpenSourceController", '~> 3.0.0' # Swift 4.2 Version
+
+pod "OpenSourceController", '~> 2.0' # Swift 4.0 Version 
 
 pod "OpenSourceController", '~> 1.0.8' # Swift 3.1 version
 ```
@@ -54,7 +55,9 @@ pod "OpenSourceController", '~> 1.0.8' # Swift 3.1 version
 - To integrate OpenSourceController into your Xcode project using [Carthage](https://github.com/Carthage/Carthage), specify it in your Cartfile :
 
 ```ruby
-github "floriangbh/OpenSourceController" ~> 2.0
+github "floriangbh/OpenSourceController" ~> 3.0.0 # Swift 4.2 version
+
+github "floriangbh/OpenSourceController" ~> 2.0 # Swift 4.0 version
 
 github "floriangbh/OpenSourceController" ~> 1.0.8 # Swift 3.1 version
 ```
@@ -75,9 +78,9 @@ let openSourceVC = OpenSourceController()
 
 // Init with LicenceFile object 
 openSourceVC.licences = [LicenceFile(title: "FacebookImagePicker", 
-url: "https://raw.githubusercontent.com/terflogag/FacebookImagePicker/master/LICENSE"),
-LicenceFile(title: "JSQMessagesViewController", 
-url: "https://raw.githubusercontent.com/jessesquires/JSQMessagesViewController/develop/LICENSE")]
+                        url: "https://raw.githubusercontent.com/terflogag/FacebookImagePicker/master/LICENSE"),
+                        LicenceFile(title: "JSQMessagesViewController", 
+                        url: "https://raw.githubusercontent.com/jessesquires/JSQMessagesViewController/develop/LICENSE")]
 
 // Present controller 
 openSourceVC.presentOpenSourceController(from: self)

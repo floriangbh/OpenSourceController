@@ -6,7 +6,7 @@
 
 import UIKit
 
-public class LicenceFile: NSObject {
+public final class LicenceFile {
 
     // MARK- Var 
 
@@ -18,6 +18,16 @@ public class LicenceFile: NSObject {
 
     /// Library's licence
     var detail: String?
+    
+    /// Build attributed text
+    lazy var attributedContent: NSAttributedString = {
+        let libraryTitleAttribut = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: UIFont.systemFontSize + 2)]
+        let libraryLicenceAttribut = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: UIFont.systemFontSize)]
+        let libraryTitle = NSMutableAttributedString(string: self.title ?? "", attributes: libraryTitleAttribut)
+        libraryTitle.append(NSAttributedString(string: "\n\n"))
+        libraryTitle.append(NSAttributedString(string: self.detail ?? "", attributes: libraryLicenceAttribut))
+        return libraryTitle
+    }()
 
     // MARK- Init
 
@@ -29,8 +39,7 @@ public class LicenceFile: NSObject {
     public init(title: String, url: String) {
         self.title = title
         self.url = url
-        self.detail = NSLocalizedString("Unable to load this licence file.",
-                                        comment: "")
+        self.detail = NSLocalizedString("Unable to load this licence file.", comment: "")
     }
 
     /// Download licence detail
@@ -38,22 +47,12 @@ public class LicenceFile: NSObject {
     /// - Parameter completion: end of download handler
     func downloadLicenceDetail(config: OpenSourceControllerConfig,
                                completion: @escaping () -> Void) {
-        if let url = URL(string: self.url) {
-            let task = URLSession.shared.dataTask(with: url) { (data, _, _) in
-                if let data = data,
-                    let html = String(data: data, encoding: String.Encoding.utf8) {
-
-                    // Update licence model 
-                    self.detail = html
-
-                    // Log 
-                    if config.verbose {
-                        print("Licence for \(self.title ?? "") downloaded with success.")
-                    }
-                }
-                completion()
+        let licenceHTTPLoader = HTTPDataLoader()
+        licenceHTTPLoader.loadData(fromUrl: self.url) { (data) in
+            if let data = data, let html = String(data: data, encoding: String.Encoding.utf8) {
+                self.detail = html
             }
-            task.resume()
+            completion()
         }
     }
 }

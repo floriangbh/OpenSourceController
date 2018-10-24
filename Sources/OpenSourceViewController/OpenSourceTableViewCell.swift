@@ -6,15 +6,12 @@
 
 import UIKit
 
-class OpenSourceTableViewCell: UITableViewCell {
+final class OpenSourceTableViewCell: UITableViewCell {
 
     // MARK: - Lifecycle
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: .default,
-                   reuseIdentifier: reuseIdentifier)
-
-        // Prepare cell
+        super.init(style: .default, reuseIdentifier: reuseIdentifier)
         self.prepareCellComponent()
     }
 
@@ -25,10 +22,7 @@ class OpenSourceTableViewCell: UITableViewCell {
     // MARK: - Prepare
 
     func prepareCellComponent() {
-        // Text
         self.textLabel?.numberOfLines = 0
-
-        // Common init
         self.accessoryType = .none
         self.selectionStyle = .none
     }
@@ -39,21 +33,11 @@ class OpenSourceTableViewCell: UITableViewCell {
     ///
     /// - Parameter licence: the licence model 
     func configure(licence: LicenceFile, config: OpenSourceControllerConfig) {
-
-        // Build attributed text 
-        let libraryTitleAttribut = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: UIFont.systemFontSize + 2)]
-        let libraryLicenceAttribut = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: UIFont.systemFontSize)]
-        let libraryTitle = NSMutableAttributedString(string: licence.title ?? "",
-                                                     attributes: libraryTitleAttribut)
-        libraryTitle.append(NSAttributedString(string: "\n\n"))
-        libraryTitle.append(NSAttributedString(string: licence.detail ?? "",
-                                               attributes: libraryLicenceAttribut))
-
         // Set text 
-        self.textLabel?.attributedText = libraryTitle
+        self.textLabel?.attributedText = licence.attributedContent
         self.textLabel?.textColor = config.uiConfig.licenceTextColor
 
-        // Background 
+        // Background
         if let backgroundColor = config.uiConfig.licenceBackgroundColor {
             self.backgroundColor = backgroundColor
         }

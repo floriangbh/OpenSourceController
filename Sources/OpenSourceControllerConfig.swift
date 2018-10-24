@@ -15,7 +15,7 @@ public struct OpenSourceControllerConfig {
         public var barTintColor: UIColor?
 
         /// Will be applied to the navigation bar 
-        public var backgroundColor: UIColor?
+        public var backgroundColor: UIColor = .white
 
         /// Will be applied to licence text
         public var licenceBackgroundColor: UIColor?
