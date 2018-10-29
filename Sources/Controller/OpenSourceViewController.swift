@@ -44,6 +44,8 @@ final class OpenSourceViewController: UIViewController {
         
         self.title = self.config.title
         
+        self.view.backgroundColor = self.config.uiConfig.backgroundColor
+        
         self.prepareCloseButton()
         self.prepareStyle()
         

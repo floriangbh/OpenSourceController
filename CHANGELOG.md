@@ -1,6 +1,10 @@
 Changelog
 ==========
 
+### 3.1.1
+
+- Fix background color  
+
 ### 3.1.0
 
 - Code cleanup 
