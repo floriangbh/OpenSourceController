@@ -1,9 +1,10 @@
-# Usage : bundle exec fastlane (patch | minor | major)
+# Usage : bundle exec fastlane ios (patch | minor | major)
 
 default_platform(:ios)
-podspec_name = "OpenSourceController.podspec" 
 
 platform :ios do
+
+  podspec_name = "OpenSourceController.podspec" 
 
   desc "Release a new version with a patch bump_type"
   lane :patch do
@@ -21,12 +22,12 @@ platform :ios do
   end
 
   def release(type)
-    pod_lib_lint
+    pod_lib_lint(use_bundle_exec: false)
     version = version_bump_podspec(path: podspec_name, bump_type: type)
     git_add(path: podspec_name)
     git_commit(path: [podspec_name], message: "#{version} release")
     add_git_tag(tag: "#{version}")
     push_to_git_remote
-    pod_push
+    pod_push(use_bundle_exec: false)
   end
 end
