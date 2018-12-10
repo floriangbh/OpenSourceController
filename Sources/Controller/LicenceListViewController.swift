@@ -11,8 +11,6 @@ import UIKit
 final class LicenceListViewController: UITableViewController {
     
     // MARK: - Var
-
-    fileprivate let reuseIdentifier = "openSourceCell"
     
     fileprivate var config: OpenSourceControllerConfig
 
@@ -40,7 +38,7 @@ final class LicenceListViewController: UITableViewController {
     
     fileprivate func prepareTableView() {
         self.tableView.tableFooterView = UIView()
-        self.tableView.register(OpenSourceTableViewCell.self, forCellReuseIdentifier: self.reuseIdentifier)
+        self.tableView.register(cellType: OpenSourceTableViewCell.self)
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.separatorStyle = .singleLine
@@ -61,19 +59,10 @@ extension LicenceListViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifier,
-                                                 for: indexPath) as? OpenSourceTableViewCell
-        // Init cell
-        if cell == nil {
-            cell = OpenSourceTableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: self.reuseIdentifier)
-        }
-        
-        // Configure the cell with licence
-        if let licence = self.downloadedLicence.get(at: indexPath.row) {
-            cell?.configure(licence: licence, config: self.config)
-        }
-        
-        return cell!
+        let cell: OpenSourceTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        guard let licence = self.downloadedLicence.get(at: indexPath.row) else { return cell }
+        cell.configure(licence: licence, config: self.config)
+        return cell
     }
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {

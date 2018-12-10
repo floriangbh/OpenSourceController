@@ -18,7 +18,11 @@ open class OpenSourceController: NSObject {
     ///
     /// - Parameter from: the source controller 
     open func presentOpenSourceController(from: UIViewController) {
-        let licenceController = OpenSourceViewController(licences: licences, showCloseButton: true, configuration: config)
+        let loader: LicenceLoader = LicenceLoader()
+        let licenceController = OpenSourceViewController(licences: licences,
+                                                         showCloseButton: true,
+                                                         configuration: config,
+                                                         licenceLoader: loader)
         let navController = UINavigationController(rootViewController: licenceController)
         from.present(navController, animated: true)
     }
@@ -27,7 +31,11 @@ open class OpenSourceController: NSObject {
     ///
     /// - Parameter from: the source controller
     open func pushOpenSourceController(from: UIViewController) {
-        let licenceController = OpenSourceViewController(licences: licences, showCloseButton: false, configuration: config)
+        let loader: LicenceLoader = LicenceLoader()
+        let licenceController = OpenSourceViewController(licences: licences,
+                                                         showCloseButton: false,
+                                                         configuration: config,
+                                                         licenceLoader: loader)
         guard let navigationController = from.navigationController else {
             assertionFailure("Source controller isn't embeded in navigation controller. Can't push.")
             return

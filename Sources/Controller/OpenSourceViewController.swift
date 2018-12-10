@@ -14,6 +14,8 @@ final class OpenSourceViewController: UIViewController {
 
     fileprivate var licences: [LicenceFile]
     
+    fileprivate var licenceLoader: LicenceLoader
+    
     fileprivate var config: OpenSourceControllerConfig
     
     fileprivate lazy var loadingController = {
@@ -28,7 +30,8 @@ final class OpenSourceViewController: UIViewController {
     
     // MARK: - Lifecyle
     
-    init(licences: [LicenceFile], showCloseButton: Bool, configuration: OpenSourceControllerConfig) {
+    init(licences: [LicenceFile], showCloseButton: Bool, configuration: OpenSourceControllerConfig, licenceLoader: LicenceLoader) {
+        self.licenceLoader = licenceLoader
         self.licences = licences
         self.showCloseButton = showCloseButton
         self.config = configuration
@@ -56,12 +59,10 @@ final class OpenSourceViewController: UIViewController {
     // MARK: - Prepare
     
     fileprivate func prepareStyle() {
-        // Apply navigation bar tint color if needed
         if let tintColor = self.config.uiConfig.barTintColor {
             self.navigationController?.navigationBar.barTintColor = tintColor
         }
         
-        // Apply navigation bar text color if needed
         if let textColor = self.config.uiConfig.titleColor {
             let attribut = [NSAttributedString.Key.foregroundColor: textColor]
             self.navigationController?.navigationBar.titleTextAttributes = attribut
@@ -69,7 +70,7 @@ final class OpenSourceViewController: UIViewController {
     }
     
     fileprivate func prepareLicences() {
-        LicenceLoader.downloadLicences(licences: licences, config: config) { [weak self] in
+        self.licenceLoader.downloadLicences(licences: licences, config: config) { [weak self] in
             guard let strongSelf = self else { return }
             let listController = LicenceListViewController(downloadedLicence: strongSelf.licences, config: strongSelf.config)
             strongSelf.loadingController.remove()

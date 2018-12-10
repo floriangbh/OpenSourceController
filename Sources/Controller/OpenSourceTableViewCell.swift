@@ -6,7 +6,7 @@
 
 import UIKit
 
-final class OpenSourceTableViewCell: UITableViewCell {
+final class OpenSourceTableViewCell: UITableViewCell, Reusable {
 
     // MARK: - Lifecycle
 
@@ -29,15 +29,10 @@ final class OpenSourceTableViewCell: UITableViewCell {
 
     // MARK: - Configure
 
-    /// Initialize the cell content with Licence model 
-    ///
-    /// - Parameter licence: the licence model 
     func configure(licence: LicenceFile, config: OpenSourceControllerConfig) {
-        // Set text 
         self.textLabel?.attributedText = licence.attributedContent
         self.textLabel?.textColor = config.uiConfig.licenceTextColor
 
-        // Background
         if let backgroundColor = config.uiConfig.licenceBackgroundColor {
             self.backgroundColor = backgroundColor
         }

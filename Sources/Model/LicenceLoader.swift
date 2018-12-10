@@ -13,7 +13,7 @@ final class LicenceLoader {
     /// - Parameters:
     ///   - licences: array which contains licence model model 
     ///   - completion: end downloading completion
-    class func downloadLicences(licences: [LicenceFile],
+    func downloadLicences(licences: [LicenceFile],
                                 config: OpenSourceControllerConfig,
                                 completion: @escaping () -> Void) {
         let licenceGroupe = DispatchGroup()
