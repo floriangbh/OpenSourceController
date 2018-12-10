@@ -1,6 +1,11 @@
 Changelog
 ==========
 
+### 3.2.0
+
+- Small refactoring 
+- Add fastlane for pods release 
+
 ### 3.1.1
 
 - Fix background color  

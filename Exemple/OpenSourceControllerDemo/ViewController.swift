@@ -16,17 +16,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    // MARK: - Action 
+    // MARK: - Action
     
-    /// Handle button click & show the controller with licences 
-    @IBAction func showOpenSource(_ sender: Any) {
-        // Create controller 
+    private func buildOpenSourceController() -> OpenSourceController {
         let openSourceVC = OpenSourceController()
         
-        // Apply some customisation if you want 
+        // Apply some customisation if you want
         //self.applyCustomUI(openSourceVC: openSourceVC)
         
-        // Init with LicenceFile object 
+        // Init with LicenceFile object
         openSourceVC.licences = [LicenceFile(title: "FacebookImagePicker",
                                              url: "https://raw.githubusercontent.com/terflogag/FacebookImagePicker/master/LICENSE"),
                                  LicenceFile(title: "JSQMessagesViewController",
@@ -38,13 +36,21 @@ class ViewController: UIViewController {
                                  LicenceFile(title: "EasyTipView",
                                              url: "https://raw.githubusercontent.com/teodorpatras/EasyTipView/master/LICENSE"),
                                  LicenceFile(title: "FakeAdress",
-                                             url: "https://raw.giusercontent.com/ashleymills/Reachability.swift/master/LICENSE"),
+                                             url: "https://fake.com/fake/LICENCE"),
                                  LicenceFile(title: "KeychainAccess",
                                              url: "https://raw.githubusercontent.com/kishikawakatsumi/KeychainAccess/master/LICENSE")]
         
-        // Present controller
+        return openSourceVC
+    }
+    
+    @IBAction func pushOpenSourceController(_ sender: Any) {
+        let openSourceVC = self.buildOpenSourceController()
         openSourceVC.pushOpenSourceController(from: self)
-        //openSourceVC.presentOpenSourceController(from: self)
+    }
+    
+    @IBAction func presentOpenSourceController(_ sender: Any) {
+        let openSourceVC = self.buildOpenSourceController()
+        openSourceVC.presentOpenSourceController(from: self)
     }
     
     // MARK: - Customization 
