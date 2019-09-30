@@ -1,6 +1,11 @@
 Changelog
 ==========
 
+### 3.2.1
+
+- Swift 5 
+- Remove swift-version file
+
 ### 3.2.0
 
 - Small refactoring 
