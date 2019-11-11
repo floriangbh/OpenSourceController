@@ -40,4 +40,5 @@ Carthage/
 
 # Cocoapods 
 Pods/
+fastlane/report.xml
 
