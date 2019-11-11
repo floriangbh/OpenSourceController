@@ -13,7 +13,12 @@ final class LoadingViewController: UIViewController {
     // MARK: - Var
     
     fileprivate lazy var activityIndicator: UIActivityIndicatorView = {
-        let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
+        let activityIndicator = UIActivityIndicatorView()
+        if #available(iOS 13.0, *) {
+            activityIndicator.style = UIActivityIndicatorView.Style.medium
+        } else {
+            activityIndicator.style = UIActivityIndicatorView.Style.gray
+        }
         activityIndicator.startAnimating()
         return activityIndicator
     }()
@@ -37,6 +42,7 @@ final class LoadingViewController: UIViewController {
         self.view.backgroundColor = self.config.uiConfig.backgroundColor
         
         self.view.addSubview(self.activityIndicator)
+        self.activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         self.activityIndicator.pinCenter(to: self.view)
     }
 }

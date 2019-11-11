@@ -1,6 +1,14 @@
 Changelog
 ==========
 
+### 4.0.0
+
+- Swift 5.1
+- Add Catalyst support 
+- Add SPM support 
+- Dark mode fix for background 
+- Layout fix for child controller and autolayout extension 
+
 ### 3.2.1
 
 - Swift 5 

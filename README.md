@@ -97,9 +97,6 @@ You can apply some customisation. To do it you can use the OpenSourceControllerC
 // Navigation bar title 
 openSourceVC.config.title = "MyCustomTitle"
 
-// Navigation bar tint color
-openSourceVC.config.uiConfig.barTintColor = UIColor.red
-
 // Close button color 
 openSourceVC.config.uiConfig.closeButtonColor = UIColor.white
 

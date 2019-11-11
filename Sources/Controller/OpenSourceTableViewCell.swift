@@ -32,9 +32,6 @@ final class OpenSourceTableViewCell: UITableViewCell, Reusable {
     func configure(licence: LicenceFile, config: OpenSourceControllerConfig) {
         self.textLabel?.attributedText = licence.attributedContent
         self.textLabel?.textColor = config.uiConfig.licenceTextColor
-
-        if let backgroundColor = config.uiConfig.licenceBackgroundColor {
-            self.backgroundColor = backgroundColor
-        }
+        self.backgroundColor = config.uiConfig.licenceBackgroundColor
     }
 }

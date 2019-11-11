@@ -24,13 +24,17 @@ final class OpenSourceViewController: UIViewController {
     
     fileprivate lazy var closeButton: UIBarButtonItem = {
         let closeButton = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(self.closePicker))
-        closeButton.tintColor = self.config.uiConfig.closeButtonColor ?? UIColor.black
+        closeButton.tintColor = self.config.uiConfig.closeButtonColor
         return closeButton
     }()
     
     // MARK: - Lifecyle
     
-    init(licences: [LicenceFile], showCloseButton: Bool, configuration: OpenSourceControllerConfig, licenceLoader: LicenceLoader) {
+    init(licences: [LicenceFile],
+         showCloseButton: Bool,
+         configuration: OpenSourceControllerConfig,
+         licenceLoader: LicenceLoader) {
+        
         self.licenceLoader = licenceLoader
         self.licences = licences
         self.showCloseButton = showCloseButton
@@ -59,14 +63,9 @@ final class OpenSourceViewController: UIViewController {
     // MARK: - Prepare
     
     fileprivate func prepareStyle() {
-        if let tintColor = self.config.uiConfig.barTintColor {
-            self.navigationController?.navigationBar.barTintColor = tintColor
-        }
-        
-        if let textColor = self.config.uiConfig.titleColor {
-            let attribut = [NSAttributedString.Key.foregroundColor: textColor]
-            self.navigationController?.navigationBar.titleTextAttributes = attribut
-        }
+        let titleColor = self.config.uiConfig.titleColor
+        let attribut = [NSAttributedString.Key.foregroundColor: titleColor]
+        self.navigationController?.navigationBar.titleTextAttributes = attribut
     }
     
     fileprivate func prepareLicences() {

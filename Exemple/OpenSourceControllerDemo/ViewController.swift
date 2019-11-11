@@ -59,9 +59,6 @@ class ViewController: UIViewController {
         // Navigation bar title
         openSourceVC.config.title = "MyCustomTitle"
 
-        // Navigation bar tint color
-        openSourceVC.config.uiConfig.barTintColor = UIColor.red
-
         // Close button color
         openSourceVC.config.uiConfig.closeButtonColor = UIColor.green
 

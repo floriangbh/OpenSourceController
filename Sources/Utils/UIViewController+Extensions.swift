@@ -15,6 +15,7 @@ extension UIViewController {
     func add(_ child: UIViewController) {
         self.addChild(child)
         self.view.addSubview(child.view)
+        view.pinEdges(to: child.view)
         child.didMove(toParent: self)
     }
     
