@@ -28,17 +28,11 @@ Display a screen with all licences used in your application can be painful to ma
 - [x] Display tableView with licences used in your app 
 - [x] Download licence from an URL
 
-## Todo (feel free to make PR)
-
-- [ ] Download licence from Podfile (https://github.com/terflogag/OpenSourceController/issues/1)
-- [ ] Download licence from Cartfile (https://github.com/terflogag/OpenSourceController/issues/2)
-- [ ] Download licence from local file
-
 ## Requirements
 
-* Xcode 9
+* Xcode 11
 * iOS 9.0+ target deployment
-* Swift 3, Swift 4 or Swift 4.2 project
+* Swift 3, Swift 4 or Swift 5.1 project
 
 ## Usage
 
