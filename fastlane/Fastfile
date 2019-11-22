@@ -18,6 +18,11 @@ platform :ios do
     release("major")
   end
 
+  desc "Scan the project"
+  lane :scan do
+    scan(scheme: "OpenSourceController-iOS")
+  end
+
   def release(type)
     podspec_name = "OpenSourceController.podspec" 
     pod_lib_lint(use_bundle_exec: false)

@@ -1,4 +1,4 @@
-name: Swift
+name: Build
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+    - name: Fastlane Action
+      uses: maierj/fastlane-action@v1.0.0
+      with:
+        lane: scan
