@@ -19,7 +19,7 @@ platform :ios do
   end
 
   desc "Scan the project"
-  lane :scan do
+  lane :scan_project do
     scan(scheme: "OpenSourceController-iOS")
   end
 
