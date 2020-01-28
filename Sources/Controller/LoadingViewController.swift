@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class LoadingViewController: UIViewController {
+open class LoadingViewController: UIViewController {
     
     // MARK: - Var
     
@@ -32,11 +32,11 @@ final class LoadingViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = self.config.uiConfig.backgroundColor

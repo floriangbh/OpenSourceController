@@ -6,7 +6,7 @@
 
 import UIKit
 
-public final class LicenceFile {
+open class LicenceFile {
 
     // MARK- Var 
 

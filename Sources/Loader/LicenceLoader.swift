@@ -6,7 +6,7 @@
 
 import UIKit
 
-final class LicenceLoader {
+open class LicenceLoader {
 
     /// Download every licence 
     ///
@@ -31,5 +31,7 @@ final class LicenceLoader {
         licenceGroupe.notify(queue: .main) {
             completion()
         }
+    }
+    public init() {
     }
 }

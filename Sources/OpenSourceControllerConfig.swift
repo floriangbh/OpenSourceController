@@ -35,5 +35,8 @@ public struct OpenSourceControllerConfig {
     public var verbose: Bool = false
 
     /// UI-specific configuration.
+    
+    public init() {
+    }
     public var uiConfig = UIConfig()
 }
