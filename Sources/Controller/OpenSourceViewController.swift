@@ -30,7 +30,7 @@ open class OpenSourceViewController: UIViewController {
     
     // MARK: - Lifecyle
     
-    init(licences: [LicenceFile],
+    public init(licences: [LicenceFile],
          showCloseButton: Bool,
          configuration: OpenSourceControllerConfig,
          licenceLoader: LicenceLoader) {
