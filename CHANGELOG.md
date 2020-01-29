@@ -1,6 +1,10 @@
 Changelog
 ==========
 
+### 4.1.1
+
+- Fix build 
+
 ### 4.1.0
 
 - Add SwiftUI support (thanks to doronkatz)
