@@ -23,8 +23,6 @@
 		76D7F24821BEB18A004B74CB /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D7F24321BEB18A004B74CB /* Array+Extensions.swift */; };
 		76D7F24921BEB18A004B74CB /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D7F24421BEB18A004B74CB /* UIView+Extensions.swift */; };
 		76EAA84F1E93EDCD009A41DA /* LicenceFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EAA84C1E93EDCD009A41DA /* LicenceFile.swift */; };
-		C415E47723E0B3AE002F960D /* OpenSourceViewController+UISwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = C415E47623E0B3AE002F960D /* OpenSourceViewController+UISwift.swift */; };
-		C415E47823E0B3AE002F960D /* OpenSourceViewController+UISwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = C415E47623E0B3AE002F960D /* OpenSourceViewController+UISwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +55,6 @@
 		76EAA84C1E93EDCD009A41DA /* LicenceFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicenceFile.swift; path = Sources/Model/LicenceFile.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* OpenSourceController.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OpenSourceController.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* OpenSourceControllerTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OpenSourceControllerTests.plist; sourceTree = "<group>"; };
-		C415E47623E0B3AE002F960D /* OpenSourceViewController+UISwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenSourceViewController+UISwift.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				76229B7F2180ADA800A61697 /* OpenSourceController.swift */,
-				C415E47623E0B3AE002F960D /* OpenSourceViewController+UISwift.swift */,
 				76229B7E2180ADA800A61697 /* OpenSourceControllerConfig.swift */,
 				76229B7B2180AD8E00A61697 /* Loader */,
 				76229B702180AD7700A61697 /* Model */,
@@ -299,7 +295,6 @@
 				76D7F24721BEB18A004B74CB /* UIViewController+Extensions.swift in Sources */,
 				76EAA84F1E93EDCD009A41DA /* LicenceFile.swift in Sources */,
 				76D7F24521BEB18A004B74CB /* UITableView+Extensions.swift in Sources */,
-				C415E47723E0B3AE002F960D /* OpenSourceViewController+UISwift.swift in Sources */,
 				769FD9D421871DEC00FB5A53 /* OpenSourceTableViewCell.swift in Sources */,
 				76D7F24821BEB18A004B74CB /* Array+Extensions.swift in Sources */,
 				76229B812180ADA800A61697 /* OpenSourceController.swift in Sources */,
@@ -313,7 +308,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C415E47823E0B3AE002F960D /* OpenSourceViewController+UISwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,7 +499,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.OpenSourceController.OpenSourceController-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -520,7 +514,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.OpenSourceController.OpenSourceController-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
