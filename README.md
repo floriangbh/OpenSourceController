@@ -61,6 +61,30 @@ openSourceVC.presentOpenSourceController(from: self)
 openSourceVC.pushOpenSourceController(from: self)
 ```
 
+With SwiftUI : 
+
+```swift
+struct OpenSourceView: UIViewControllerRepresentable {
+    @available(iOS 13, *)
+    public func updateUIViewController(_ uiViewController: OpenSourceViewController, context: UIViewControllerRepresentableContext<OpenSourceView>) {
+        //
+    }
+    
+    @available(iOS 13, *)
+    public func makeUIViewController(context: UIViewControllerRepresentableContext<OpenSourceView>) -> OpenSourceViewController {
+        let openSourceVC = OpenSourceViewController(licences:
+            [LicenceFile(title: "FacebookImagePicker",
+                         url: "https://raw.githubusercontent.com/terflogag/FacebookImagePicker/master/LICENSE"),
+             LicenceFile(title: "JSQMessagesViewController",
+                         url: "https://raw.githubusercontent.com/jessesquires/JSQMessagesViewController/develop/LICENSE")],
+                                                    showCloseButton: true,
+                                                    configuration: OpenSourceControllerConfig(),
+                                                    licenceLoader: LicenceLoader())
+        return openSourceVC
+    }
+}
+```
+
 ## Customisation
 
 You can apply some customisation. To do it you can use the OpenSourceControllerConfig structure like this :
