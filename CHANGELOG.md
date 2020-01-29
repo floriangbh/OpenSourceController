@@ -1,6 +1,15 @@
 Changelog
 ==========
 
+### 4.1.0
+
+- Add SwiftUI support (thanks to doronkatz)
+
+### 4.0.2
+
+- Fix pod release
+- Add Github workflow 
+
 ### 4.0.1
 
 - Fix SPM 
