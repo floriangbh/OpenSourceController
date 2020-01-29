@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class HTTPDataLoader {
+open class HTTPDataLoader {
     func loadData(fromUrl url: String, completion: @escaping (Data?) -> Void) {
         if let url = URL(string: url) {
             let task = URLSession.shared.dataTask(with: url) { (data, _, error) in

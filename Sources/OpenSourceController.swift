@@ -5,6 +5,9 @@
 //  Created by Florian Gabach on 05/02/2017.
 
 import UIKit
+#if canImport(SwiftUI)
+import SwiftUI
+#endif
 
 open class OpenSourceController: NSObject { 
 
@@ -43,3 +46,4 @@ open class OpenSourceController: NSObject {
         navigationController.pushViewController(licenceController, animated: true)
     }
 }
+

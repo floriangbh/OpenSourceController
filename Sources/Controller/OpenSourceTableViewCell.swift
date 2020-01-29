@@ -6,7 +6,7 @@
 
 import UIKit
 
-final class OpenSourceTableViewCell: UITableViewCell, Reusable {
+open class OpenSourceTableViewCell: UITableViewCell, Reusable {
 
     // MARK: - Lifecycle
 
@@ -15,7 +15,7 @@ final class OpenSourceTableViewCell: UITableViewCell, Reusable {
         self.prepareCellComponent()
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
